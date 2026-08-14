@@ -96,6 +96,9 @@ body.ultimate-light-theme {
 .text-emerald { color: var(--emerald); }
 .text-amber { color: var(--amber); }
 .text-purple { color: var(--purple); }
+.text-teal { color: #0d9488; }
+
+.skill-tag.active-teal { background: #ccfbf1; color: #0d9488; font-weight: 700; border-color: #99f6e4; }
 
 /* Buttons & Badges */
 .btn {
@@ -189,7 +192,8 @@ section { padding: 100px 0; }
 .section-title { font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; font-weight: 800; }
 .section-subtitle { font-size: 1.8rem; font-weight: 800; color: var(--text-primary); }
 
-.about-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+/* About Section */
+.about-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 .about-card {
     background: var(--bg-card);
     padding: 36px 28px;
@@ -205,6 +209,7 @@ section { padding: 100px 0; }
 .glow-emerald { background: var(--emerald-soft); color: var(--emerald); }
 .glow-amber { background: var(--amber-soft); color: var(--amber); }
 .glow-purple { background: var(--purple-soft); color: var(--purple); }
+.glow-teal { background: #ccfbf1; color: #0d9488; }
 .about-card h3 { font-size: 1.2rem; margin-bottom: 12px; }
 .about-card p { color: var(--text-muted); font-size: 0.95rem; }
 
