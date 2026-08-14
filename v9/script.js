@@ -102,6 +102,13 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.addEventListener('click', () => {
             navMenu.classList.toggle('active');
         });
+
+        // 모바일 메뉴에서 링크 클릭 시 메뉴 자동 닫기
+        navMenu.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
     }
 
     // 6. Email Copy
