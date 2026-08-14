@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김형식 | 백엔드 개발자 포트폴리오 (v4 IDE / Terminal Edition)</title>
+    <meta name="description" content="7년 차 백엔드 개발자 김형식의 개발자 감성 IDE & Terminal 컨셉 v4 포트폴리오입니다. C#, .NET Core, MSSQL 전문.">
+    
+    <!-- Google Fonts (JetBrains Mono & Noto Sans KR) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="ide-theme">
+
+    <!-- IDE Container Window -->
+    <div class="ide-window">
+        <!-- Window Titlebar -->
+        <header class="ide-titlebar">
+            <div class="window-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+            </div>
+            <div class="window-title">
+                <i class="fa-solid fa-code text-cyan"></i> KimHyoungSik_Backend_Developer.cs - Visual Studio Code
+            </div>
+            <div class="window-actions">
+                <a href="../" class="hub-btn"><i class="fa-solid fa-house"></i> 허브 메인</a>
+            </div>
+        </header>
+
+        <!-- IDE Main Layout -->
+        <div class="ide-body">
+            <!-- Sidebar File Explorer -->
+            <aside class="ide-sidebar">
+                <div class="sidebar-title">EXPLORER</div>
+                <div class="file-tree">
+                    <div class="tree-folder open">
+                        <i class="fa-solid fa-folder-open text-yellow"></i> <span>portfolio_src</span>
+                    </div>
+                    <div class="tree-file active" data-tab="hero">
+                        <i class="fa-solid fa-file-code text-blue"></i> <span>1_Profile.cs</span>
+                    </div>
+                    <div class="tree-file" data-tab="skills">
+                        <i class="fa-solid fa-file-lines text-green"></i> <span>2_Skills.json</span>
+                    </div>
+                    <div class="tree-file" data-tab="experience">
+                        <i class="fa-solid fa-file-code text-purple"></i> <span>3_Experience.cs</span>
+                    </div>
+                    <div class="tree-file" data-tab="projects">
+                        <i class="fa-solid fa-database text-orange"></i> <span>4_Projects.sql</span>
+                    </div>
+                    <div class="tree-file" data-tab="contact">
+                        <i class="fa-solid fa-terminal text-cyan"></i> <span>5_Contact.sh</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Editor Main Area -->
+            <main class="ide-editor">
+                <!-- Editor Tabs Header -->
+                <div class="editor-tabs">
+                    <div class="tab active" data-tab="hero"><i class="fa-solid fa-file-code text-blue"></i> 1_Profile.cs</div>
+                    <div class="tab" data-tab="skills"><i class="fa-solid fa-file-lines text-green"></i> 2_Skills.json</div>
+                    <div class="tab" data-tab="experience"><i class="fa-solid fa-file-code text-purple"></i> 3_Experience.cs</div>
+                    <div class="tab" data-tab="projects"><i class="fa-solid fa-database text-orange"></i> 4_Projects.sql</div>
+                    <div class="tab" data-tab="contact"><i class="fa-solid fa-terminal text-cyan"></i> 5_Contact.sh</div>
+                </div>
+
+                <!-- Tab Content 1: Profile.cs -->
+                <section class="tab-content active" id="tab-hero">
+                    <div class="code-view">
+                        <div class="line-numbers">
+                            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
+                        </div>
+                        <div class="code-body">
+<pre><span class="kwd">using</span> System;
+<span class="kwd">namespace</span> <span class="typ">BackendDeveloper</span>
+{
+    <span class="kwd">public class</span> <span class="typ">KimHyoungSik</span> : <span class="typ">IBackendEngineer</span>
+    {
+        <span class="kwd">public string</span> Name => <span class="str">"김형식"</span>;
+        <span class="kwd">public string</span> Role => <span class="str">"백엔드 & 풀스택 개발자"</span>;
+        <span class="kwd">public double</span> ExperienceYears => <span class="num">6.33</span>; <span class="cmt">// 6년 4개월 경력</span>
+        <span class="kwd">public string[]</span> PrimaryStack => <span class="kwd">new</span>[] { <span class="str">"C#"</span>, <span class="str">".NET Core"</span>, <span class="str">"MSSQL"</span>, <span class="str">"RESTful API"</span> };
+
+        <span class="kwd">public string</span> GetPhilosophy()
+        {
+            <span class="kwd">return</span> <span class="str">"단순한 기능 구현을 넘어 시스템 전체 아키텍처를 조망하고 사전에 문제를 해결합니다."</span>;
+        }
+
+        <span class="kwd">public void</span> Collaborate()
+        {
+            <span class="cmt">// 기획자, 프론트엔드 및 외부 기관과의 명확한 커뮤니케이션을 바탕으로 완벽한 서비스를 구축합니다.</span>
+            Console.WriteLine(<span class="str">"Collaborating smoothly with Slack, Monday, GitHub..."</span>);
+        }
+    }
+}</pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tab Content 2: Skills.json -->
+                <section class="tab-content" id="tab-skills">
+                    <div class="code-view">
+                        <div class="line-numbers">
+                            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+                        </div>
+                        <div class="code-body">
+<pre>{
+  <span class="key">"developer"</span>: <span class="str">"김형식"</span>,
+  <span class="key">"core_backend_skills"</span>: [
+    <span class="str">"C#"</span>, <span class="str">".NET Core"</span>, <span class="str">"ASP.NET CORE"</span>, <span class="str">"ASP.NET MVC"</span>, 
+    <span class="str">"MSSQL"</span>, <span class="str">"EF Core"</span>, <span class="str">"RESTful API 설계"</span>, <span class="str">"Classic ASP"</span>
+  ],
+  <span class="key">"frontend_and_tools"</span>: [
+    <span class="str">"JavaScript"</span>, <span class="str">"jQuery"</span>, <span class="str">"Ajax"</span>, <span class="str">"HTML5/CSS3"</span>, <span class="str">"Bootstrap"</span>,
+    <span class="str">"Git / GitHub"</span>, <span class="str">"Slack"</span>, <span class="str">"Monday"</span>
+  ],
+  <span class="key">"certifications"</span>: [<span class="str">"CCNA (Cisco Certified Network Associate)"</span>]
+}</pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tab Content 3: Experience.cs -->
+                <section class="tab-content" id="tab-experience">
+                    <div class="code-view">
+                        <div class="line-numbers">
+                            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span>
+                        </div>
+                        <div class="code-body">
+<pre><span class="cmt">// WORK EXPERIENCE LIST</span>
+<span class="kwd">var</span> history = <span class="kwd">new</span> List&lt;<span class="typ">CompanyExperience</span>&gt;() 
+{
+    <span class="kwd">new</span> <span class="typ">CompanyExperience</span> {
+        CompanyName = <span class="str">"(주)유엔이"</span>,
+        Department = <span class="str">"안전보건서비스팀 · 대리"</span>,
+        Period = <span class="str">"2023.04 ~ 2026.05 (3년 2개월)"</span>,
+        Role = <span class="str">"백엔드/서버개발"</span>,
+        Tasks = <span class="str">"안전보건 B2B SaaS 스마플, 어드민, PDF/Excel 보고서 엔진 및 MSSQL 최적화"</span>
+    },
+    <span class="kwd">new</span> <span class="typ">CompanyExperience</span> {
+        CompanyName = <span class="str">"케이알피스인포텍"</span>,
+        Department = <span class="str">"기술연구소 · 대리 2년차"</span>,
+        Period = <span class="str">"2020.01 ~ 2023.02 (3년 2개월)"</span>,
+        Role = <span class="str">"Full-stack 개발"</span>,
+        Tasks = <span class="str">"현대건설, 현대종합설계, 한화생명 등 대기업 SI 웹 서비스 개발 및 유지보수"</span>
+    }
+};</pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tab Content 4: Projects.sql -->
+                <section class="tab-content" id="tab-projects">
+                    <div class="ide-sql-controls">
+                        <span>FILTER BY COMPANY:</span>
+                        <button class="sql-filter active" data-filter="all">ALL (15)</button>
+                        <button class="sql-filter" data-filter="une">(주)유엔이 (3)</button>
+                        <button class="sql-filter" data-filter="krpis">케이알피스인포텍 (11)</button>
+                        <button class="sql-filter" data-filter="starflex">스타플렉스 외주 (1)</button>
+                    </div>
+
+                    <div class="sql-project-cards" id="sqlProjectGrid">
+                        <!-- Project Items -->
+                        <div class="sql-card" data-company="une">
+                            <div class="sql-header"><span class="tag-une">(주)유엔이</span> <span class="p-num">PROJ_15</span></div>
+                            <div class="sql-title">스마플 어드민 (SaaS 관리자 시스템)</div>
+                            <div class="sql-period">2023.08 ~ 2026.04 (32개월)</div>
+                            <div class="sql-desc">구독 관리, 유저 통계 대시보드화, 고객센터 연동 기능 백엔드 개발</div>
+                            <div class="sql-tech">C# | ASP.NET Core | MSSQL</div>
+                        </div>
+
+                        <div class="sql-card" data-company="une">
+                            <div class="sql-header"><span class="tag-une">(주)유엔이</span> <span class="p-num">PROJ_14</span></div>
+                            <div class="sql-title">스마트 보고서 자동 출력 서비스</div>
+                            <div class="sql-period">2023.04 ~ 2026.04 (36개월)</div>
+                            <div class="sql-desc">대한산업안전협회 안전관리 기록 기반 PDF & Excel 자동 출력 엔진 개발</div>
+                            <div class="sql-tech">C# | ASP.NET Core | MSSQL</div>
+                        </div>
+
+                        <div class="sql-card" data-company="une">
+                            <div class="sql-header"><span class="tag-une">(주)유엔이</span> <span class="p-num">PROJ_13</span></div>
+                            <div class="sql-title">스마플 (안전보건관리 플랫폼)</div>
+                            <div class="sql-period">2023.04 ~ 2026.04 (36개월)</div>
+                            <div class="sql-desc">산업안전보건법 준수 안전점검, 교육, 협력사 연동 백엔드 로직 설계</div>
+                            <div class="sql-tech">C# | .NET Core | MSSQL</div>
+                        </div>
+
+                        <div class="sql-card" data-company="krpis">
+                            <div class="sql-header"><span class="tag-krpis">케이알피스인포텍</span> <span class="p-num">PROJ_12</span></div>
+                            <div class="sql-title">현대건설 RE100 시뮬레이션 시스템</div>
+                            <div class="sql-period">2022.09 ~ 2023.01 (5개월)</div>
+                            <div class="sql-desc">RE100 시뮬레이션 웹 화면 구현 및 백엔드 로직 개발 (풀스택)</div>
+                            <div class="sql-tech">C# | ASP.NET | jQuery | MSSQL</div>
+                        </div>
+
+                        <div class="sql-card" data-company="starflex">
+                            <div class="sql-header"><span class="tag-starflex">스타플렉스 (외주)</span> <span class="p-num">PROJ_11</span></div>
+                            <div class="sql-title">스타플렉스VR 관리자 웹</div>
+                            <div class="sql-period">2022.05 ~ 2022.07 (2개월)</div>
+                            <div class="sql-desc">관리자 웹 화면 개발 및 백엔드 API 연동 기능 구현</div>
+                            <div class="sql-tech">C# | ASP.NET Core 6 | MySQL</div>
+                        </div>
+
+                        <div class="sql-card" data-company="krpis">
+                            <div class="sql-header"><span class="tag-krpis">케이알피스인포텍</span> <span class="p-num">PROJ_10</span></div>
+                            <div class="sql-title">현대종합설계 근무시간 상한제 고도화</div>
+                            <div class="sql-period">2022.03 ~ 2023.07 (6개월)</div>
+                            <div class="sql-desc">근무시간 관리 고도화 및 백엔드 비즈니스 로직 확장</div>
+                            <div class="sql-tech">C# | ASP.NET Core | MSSQL</div>
+                        </div>
+
+                        <div class="sql-card" data-company="krpis">
+                            <div class="sql-header"><span class="tag-krpis">케이알피스인포텍</span> <span class="p-num">PROJ_09</span></div>
+                            <div class="sql-title">한화생명금융서비스 자산관리 시스템</div>
+                            <div class="sql-period">2021.10 ~ 2022.02 (5개월)</div>
+                            <div class="sql-desc">금융 자산 관리 웹 화면 개발 및 백엔드 데이터 연동</div>
+                            <div class="sql-tech">C# | ASP.NET Core | MSSQL</div>
+                        </div>
+
+                        <div class="sql-card" data-company="krpis">
+                            <div class="sql-header"><span class="tag-krpis">케이알피스인포텍</span> <span class="p-num">PROJ_08</span></div>
+                            <div class="sql-title">현대종합설계 매체제어 시스템</div>
+                            <div class="sql-period">2021.08 ~ 2021.08 (1개월)</div>
+                            <div class="sql-desc">매체제어 관리 웹 화면 개발 및 백엔드 기능 구축</div>
+                            <div class="sql-tech">C# | ASP.NET Core | MSSQL</div>
+                        </div>
+
+                        <div class="sql-card" data-company="krpis">
+                            <div class="sql-header"><span class="tag-krpis">케이알피스인포텍</span> <span class="p-num">PROJ_07</span></div>
+                            <div class="sql-title">현대종합설계 수행실적 관리 시스템</div>
+                            <div class="sql-period">2021.07 ~ 2021.09 (3개월)</div>
+                            <div class="sql-desc">수행실적 전산화 웹 화면 개발 및 기능 구현</div>
+                            <div class="sql-tech">C# | ASP.NET Core | MSSQL</div>
+                        </div>
+
+                        <div class="sql-card" data-company="krpis">
+                            <div class="sql-header"><span class="tag-krpis">케이알피스인포텍</span> <span class="p-num">PROJ_06</span></div>
+                            <div class="sql-title">현대건설 배구단 홈페이지</div>
+                            <div class="sql-period">2021.06 ~ 2021.12 (6개월)</div>
+                            <div class="sql-desc">구단 공식 서비스 웹 화면 개발 및 DB 연동</div>
+                            <div class="sql-tech">C# | ASP.NET MVC | MSSQL</div>
+                        </div>
+
+                        <div class="sql-card" data-company="krpis">
+                            <div class="sql-header"><span class="tag-krpis">케이알피스인포텍</span> <span class="p-num">PROJ_05</span></div>
+                            <div class="sql-title">현대스틸산업 근무시간 상한제 서비스</div>
+                            <div class="sql-period">2021.01 ~ 2023.01 (25개월)</div>
+                            <div class="sql-desc">근무시간 관리 핵심 비즈니스 로직 유지보수</div>
+                            <div class="sql-tech">Classic ASP | C# | MSSQL</div>
+                        </div>
+
+                        <div class="sql-card" data-company="krpis">
+                            <div class="sql-header"><span class="tag-krpis">케이알피스인포텍</span> <span class="p-num">PROJ_04</span></div>
+                            <div class="sql-title">현대종합설계 통합 계정 관리(IM)</div>
+                            <div class="sql-period">2021.01 ~ 2023.01 (25개월)</div>
+                            <div class="sql-desc">계정 관리 서비스 비즈니스 로직 운영 및 유지보수</div>
+                            <div class="sql-tech">Classic ASP | C# | MSSQL</div>
+                        </div>
+
+                        <div class="sql-card" data-company="krpis">
+                            <div class="sql-header"><span class="tag-krpis">케이알피스인포텍</span> <span class="p-num">PROJ_03</span></div>
+                            <div class="sql-title">현대스틸산업 Lessons Learned 전산화</div>
+                            <div class="sql-period">2020.10 ~ 2021.01 (3개월)</div>
+                            <div class="sql-desc">지침서 전산화 웹 화면 구축 및 데이터 연동 로직 개발</div>
+                            <div class="sql-tech">C# | ASP.NET Core | MSSQL</div>
+                        </div>
+
+                        <div class="sql-card" data-company="krpis">
+                            <div class="sql-header"><span class="tag-krpis">케이알피스인포텍</span> <span class="p-num">PROJ_02</span></div>
+                            <div class="sql-title">현대종합설계 인사평가 시스템</div>
+                            <div class="sql-period">2020.07 ~ 2020.11 (4개월)</div>
+                            <div class="sql-desc">인사평가 관리 웹 화면 개발 및 백엔드 연동</div>
+                            <div class="sql-tech">C# | ASP.NET MVC | MSSQL</div>
+                        </div>
+
+                        <div class="sql-card" data-company="krpis">
+                            <div class="sql-header"><span class="tag-krpis">케이알피스인포텍</span> <span class="p-num">PROJ_01</span></div>
+                            <div class="sql-title">현대종합설계 근무시간 상한제 서비스</div>
+                            <div class="sql-period">2020.01 ~ 2023.01 (37개월)</div>
+                            <div class="sql-desc">근무시간 관리 시스템 운영 및 지속적 유지보수</div>
+                            <div class="sql-tech">Classic ASP | C# | MSSQL</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tab Content 5: Contact.sh -->
+                <section class="tab-content" id="tab-contact">
+                    <div class="terminal-view">
+                        <div class="term-line"><span class="prompt">hyoungsik@backend:~$</span> cat ./contact_info.txt</div>
+                        <div class="term-output">
+Email: hyo******@outlook.kr <button class="term-btn" id="copyEmailBtn" data-email="hyo******@outlook.kr">[Copy Email]</button>
+Location: 서울특별시 성북구
+Cert: CCNA (Cisco Certified Network Associate)
+Status: Open for Backend & Full-Stack Opportunities
+                        </div>
+                        <div class="term-line"><span class="prompt">hyoungsik@backend:~$</span> <span class="cursor">_</span></div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- IDE Footer Status Bar -->
+        <footer class="ide-statusbar">
+            <div class="status-left">
+                <span><i class="fa-solid fa-code-branch"></i> main</span>
+                <span><i class="fa-solid fa-circle-check text-green"></i> 0 errors, 0 warnings</span>
+            </div>
+            <div class="status-right">
+                <span>UTF-8</span>
+                <span>C# / JSON / SQL</span>
+                <span>v4 Terminal Edition</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

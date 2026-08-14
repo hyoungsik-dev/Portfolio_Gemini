@@ -1,0 +1,386 @@
+/* ==========================================
+   V4 IDE & TERMINAL THEME STYLES
+   ========================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-editor: #1e1e1e;
+    --bg-sidebar: #252526;
+    --bg-titlebar: #323233;
+    --bg-statusbar: #007acc;
+    --bg-tab-active: #1e1e1e;
+    --bg-tab-inactive: #2d2d2d;
+    
+    --text-primary: #d4d4d4;
+    --text-muted: #858585;
+    
+    --syntax-kwd: #569cd6;
+    --syntax-typ: #4ec9b0;
+    --syntax-str: #ce9178;
+    --syntax-num: #b5cea8;
+    --syntax-cmt: #6a9955;
+    --syntax-key: #9cdcfe;
+    
+    --cyan: #38bdf8;
+    --yellow: #f1c40f;
+    --blue: #3498db;
+    --green: #2ecc71;
+    --purple: #9b59b6;
+    --orange: #e67e22;
+    
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'Plus Jakarta Sans', 'Noto Sans KR', sans-serif;
+}
+
+body.ide-theme {
+    font-family: var(--font-mono);
+    background-color: #121212;
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.ide-window {
+    width: 100%;
+    max-width: 1200px;
+    height: 820px;
+    background-color: var(--bg-editor);
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+    border: 1px solid #3c3c3c;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Titlebar */
+.ide-titlebar {
+    height: 40px;
+    background-color: var(--bg-titlebar);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-bottom: 1px solid #2b2b2b;
+    user-select: none;
+}
+
+.window-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.control.close { background-color: #ff5f56; }
+.control.minimize { background-color: #ffbd2e; }
+.control.maximize { background-color: #27c93f; }
+
+.window-title {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.hub-btn {
+    font-size: 0.8rem;
+    color: #ffffff;
+    background: #007acc;
+    padding: 4px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: var(--font-sans);
+    font-weight: 600;
+}
+
+/* Body & Sidebar */
+.ide-body {
+    flex-grow: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.ide-sidebar {
+    width: 240px;
+    background-color: var(--bg-sidebar);
+    border-right: 1px solid #2b2b2b;
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    padding: 0 16px 12px;
+}
+
+.file-tree {
+    display: flex;
+    flex-direction: column;
+}
+
+.tree-folder {
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.tree-file {
+    padding: 8px 16px 8px 32px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.tree-file:hover, .tree-file.active {
+    background-color: #37373d;
+    color: #ffffff;
+}
+
+/* Editor Main */
+.ide-editor {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-editor);
+    overflow: hidden;
+}
+
+.editor-tabs {
+    display: flex;
+    background-color: var(--bg-tab-inactive);
+    border-bottom: 1px solid #2b2b2b;
+    overflow-x: auto;
+}
+
+.tab {
+    padding: 10px 20px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    background-color: var(--bg-tab-inactive);
+    border-right: 1px solid #252526;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    white-space: nowrap;
+}
+
+.tab.active {
+    background-color: var(--bg-tab-active);
+    color: #ffffff;
+    border-top: 2px solid #007acc;
+}
+
+.tab-content {
+    display: none;
+    flex-grow: 1;
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Code Syntax View */
+.code-view {
+    display: flex;
+    gap: 24px;
+}
+
+.line-numbers {
+    display: flex;
+    flex-direction: column;
+    color: #5a5a5a;
+    font-size: 0.9rem;
+    user-select: none;
+    text-align: right;
+    min-width: 24px;
+}
+
+.code-body pre {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* Syntax Color Tokens */
+.kwd { color: var(--syntax-kwd); font-weight: 600; }
+.typ { color: var(--syntax-typ); }
+.str { color: var(--syntax-str); }
+.num { color: var(--syntax-num); }
+.cmt { color: var(--syntax-cmt); font-style: italic; }
+.key { color: var(--syntax-key); }
+
+/* SQL Projects Section in IDE */
+.ide-sql-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    flex-wrap: wrap;
+}
+
+.sql-filter {
+    background: #2d2d2d;
+    border: 1px solid #3c3c3c;
+    color: var(--text-primary);
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.sql-filter.active {
+    background: #007acc;
+    border-color: #007acc;
+    color: #ffffff;
+}
+
+.sql-project-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.sql-card {
+    background: #252526;
+    border: 1px solid #3c3c3c;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sql-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+}
+
+.tag-une { color: #2ecc71; }
+.tag-krpis { color: #3498db; }
+.tag-starflex { color: #9b59b6; }
+.p-num { color: #858585; }
+
+.sql-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.sql-period {
+    font-size: 0.78rem;
+    color: #858585;
+    margin-bottom: 10px;
+}
+
+.sql-desc {
+    font-size: 0.85rem;
+    color: #cccccc;
+    margin-bottom: 12px;
+    font-family: var(--font-sans);
+}
+
+.sql-tech {
+    font-size: 0.75rem;
+    color: #38bdf8;
+}
+
+/* Terminal View */
+.terminal-view {
+    background: #181818;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #333333;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+}
+
+.term-line {
+    margin-bottom: 12px;
+}
+
+.prompt {
+    color: #2ecc71;
+    font-weight: 700;
+}
+
+.term-output {
+    color: #d4d4d4;
+    white-space: pre-wrap;
+    margin-bottom: 16px;
+    background: #222222;
+    padding: 16px;
+    border-radius: 6px;
+}
+
+.term-btn {
+    background: #007acc;
+    color: #ffffff;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+}
+
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Statusbar */
+.ide-statusbar {
+    height: 28px;
+    background-color: var(--bg-statusbar);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    font-size: 0.75rem;
+}
+
+.status-left, .status-right {
+    display: flex;
+    gap: 16px;
+}
+
+@media (max-width: 992px) {
+    .ide-sidebar { display: none; }
+    .sql-project-cards { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김형식 | 백엔드 개발자 포트폴리오 쇼케이스 (v9 ~ v1)</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Plus Jakarta Sans', 'Noto Sans KR', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-image: 
+                radial-gradient(at 10% 10%, rgba(5, 150, 105, 0.06) 0px, transparent 50%),
+                radial-gradient(at 90% 90%, rgba(217, 119, 6, 0.06) 0px, transparent 50%);
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .name-title {
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #059669;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .main-heading {
+            font-size: 2.75rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            color: #0f172a;
+        }
+
+        .sub-heading {
+            font-size: 1.1rem;
+            color: #64748b;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .version-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 32px 26px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .version-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.12);
+        }
+
+        .version-badge {
+            align-self: flex-start;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .badge-v9 { background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0; }
+        .badge-v8 { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
+        .badge-v7 { background: #f3e8ff; color: #7e22ce; border: 1px solid #d8b4fe; }
+        .badge-v6 { background: #fff7ed; color: #ea580c; border: 1px solid #ffedd5; }
+        .badge-v5 { background: #fdf2f8; color: #db2777; border: 1px solid #fbcfe8; }
+        .badge-v4 { background: #fffbeb; color: #d97706; border: 1px solid #fde68a; }
+        .badge-v3 { background: #eef2ff; color: #4f46e5; border: 1px solid #c7d2fe; }
+        .badge-v2 { background: #f0f9ff; color: #0284c7; border: 1px solid #bae6fd; }
+        .badge-v1 { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+
+        .card-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        .card-desc {
+            font-size: 0.92rem;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 28px;
+        }
+
+        .feature-list li {
+            font-size: 0.85rem;
+            color: #334155;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-view {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 12px 18px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            background: #f8fafc;
+            color: #0f172a;
+            border: 1px solid #e2e8f0;
+        }
+
+        .btn-view:hover {
+            transform: translateY(-2px);
+            background: #059669;
+            color: #ffffff;
+            border-color: #059669;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #e2e8f0;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 992px) {
+            .card-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .card-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <div class="name-title">Kim Hyoung-sik Portfolio Showcase</div>
+            <h1 class="main-heading">김형식 백엔드 개발자 포트폴리오 (v9 ~ v1)</h1>
+            <p class="sub-heading">화사하고 신선한 라이트 모드 스타일 포트폴리오 스위처 허브입니다.</p>
+        </header>
+
+        <div class="card-grid">
+            <!-- Version 9 Card (추천 라이트 결정판) -->
+            <div class="version-card" style="border-color: #a7f3d0; background: #ffffff; grid-column: span 3; box-shadow: 0 15px 35px -5px rgba(5, 150, 105, 0.12);">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px;">
+                    <div style="max-width: 700px;">
+                        <span class="version-badge badge-v9">Version 9.0 (추천 라이트 결정판)</span>
+                        <h2 class="card-title" style="font-size: 1.8rem; color: #0f172a;">Ultimate Light Masterpiece</h2>
+                        <p class="card-desc" style="font-size: 1.05rem; color: #475569;">에메랄드 틸 그린 & 엠버 골드 시그니처 컬러, Scroll Reveal 페이드인 애니메이션, 3D Tilt 마우스 반응 카드, 15개 전체 프로젝트 수록.</p>
+                        <ul class="feature-list" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                            <li><i class="fa-solid fa-check" style="color:#059669;"></i> 화사한 오프화이트 & 에메랄드 시그니처 컬러</li>
+                            <li><i class="fa-solid fa-check" style="color:#059669;"></i> Intersection Observer 스크롤 애니메이션</li>
+                            <li><i class="fa-solid fa-check" style="color:#059669;"></i> 3D 마우스 Tilt 반응 & 수치 카운팅</li>
+                            <li><i class="fa-solid fa-check" style="color:#059669;"></i> 15개 프로젝트 & 소속회사 필터링</li>
+                        </ul>
+                    </div>
+                    <div style="min-width: 240px; align-self: center;">
+                        <a href="./v9/" class="btn-view" style="background: #059669; color: #ffffff; border-color: transparent; padding: 16px 28px; font-size: 1rem; box-shadow: 0 4px 20px rgba(5, 150, 105, 0.3);">v9 바로가기 <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Version 8 Card -->
+            <div class="version-card">
+                <div>
+                    <span class="version-badge badge-v8">Version 8.0 (라이트 모션)</span>
+                    <h2 class="card-title">Scroll Motion Light</h2>
+                    <p class="card-desc">슬레이트 라이트 모드에 Scroll Reveal 애니메이션 + 3D Tilt 반응 & 수치 카운팅 적용.</p>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-check" style="color:#2563eb;"></i> 모던 라이트 톤 + 스크롤 모션</li>
+                        <li><i class="fa-solid fa-check" style="color:#2563eb;"></i> Intersection Observer & 3D Tilt</li>
+                        <li><i class="fa-solid fa-check" style="color:#2563eb;"></i> 동적 카운트업 & 15개 프로젝트</li>
+                    </ul>
+                </div>
+                <a href="./v8/" class="btn-view">v8 보러가기 <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Version 6 Card -->
+            <div class="version-card">
+                <div>
+                    <span class="version-badge badge-v6">Version 6.0 (웜 오렌지)</span>
+                    <h2 class="card-title">Modern Editorial Bold</h2>
+                    <p class="card-desc">고급 잡지 및 에이전시 룩. 샌드 크림 배경과 강렬한 웜 테라코타 오렌지 타이포그래피.</p>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-check" style="color:#ea580c;"></i> Modern Editorial Light Style</li>
+                        <li><i class="fa-solid fa-check" style="color:#ea580c;"></i> 묵직하고 신뢰감을 주는 내공</li>
+                        <li><i class="fa-solid fa-check" style="color:#ea580c;"></i> 15개 전체 프로젝트 수록</li>
+                    </ul>
+                </div>
+                <a href="./v6/" class="btn-view">v6 보러가기 <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Version 2 Card -->
+            <div class="version-card">
+                <div>
+                    <span class="version-badge badge-v2">Version 2.0 (라이트 필터)</span>
+                    <h2 class="card-title">Full Projects Light</h2>
+                    <p class="card-desc">v1 스타일에 이력서 15개 전체 프로젝트 수록 및 회사별 동적 카테고리 필터 탑재.</p>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-check" style="color:#0284c7;"></i> 라이트 모드 + 15개 전체 프로젝트</li>
+                        <li><i class="fa-solid fa-check" style="color:#0284c7;"></i> 소속회사 동적 필터링</li>
+                        <li><i class="fa-solid fa-check" style="color:#0284c7;"></i> RESTful API / Slack / Monday 강조</li>
+                    </ul>
+                </div>
+                <a href="./v2/" class="btn-view">v2 보러가기 <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Version 1 Card -->
+            <div class="version-card">
+                <div>
+                    <span class="version-badge badge-v1">Version 1.0 (미니멀)</span>
+                    <h2 class="card-title">Minimal Light</h2>
+                    <p class="card-desc">흰색 바탕의 미니멀 라이트 스타일. 6개 대표 프로젝트 중심의 스피디한 구성.</p>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-check" style="color:#475569;"></i> 미니멀 라이트 디자인</li>
+                        <li><i class="fa-solid fa-check" style="color:#475569;"></i> 핵심 6개 대표 프로젝트</li>
+                        <li><i class="fa-solid fa-check" style="color:#475569;"></i> 직관적인 인터페이스</li>
+                    </ul>
+                </div>
+                <a href="./v1/" class="btn-view">v1 보러가기 <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Version 5 Card -->
+            <div class="version-card">
+                <div>
+                    <span class="version-badge badge-v5">Version 5.0 (Bento)</span>
+                    <h2 class="card-title">Apple Style Bento Grid</h2>
+                    <p class="card-desc">Apple, Linear 스타일의 사각형 Bento Box 모듈형 레이아웃 + Spotlight 효과.</p>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-check" style="color:#db2777;"></i> 트렌디한 Bento Grid 모듈 Layout</li>
+                        <li><i class="fa-solid fa-check" style="color:#db2777;"></i> 마우스 추적 Spotlight 반응</li>
+                    </ul>
+                </div>
+                <a href="./v5/" class="btn-view">v5 보러가기 <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Version 4 Card -->
+            <div class="version-card">
+                <div>
+                    <span class="version-badge badge-v4">Version 4.0 (IDE)</span>
+                    <h2 class="card-title">IDE / Terminal Edition</h2>
+                    <p class="card-desc">VS Code 및 터미널 쉘 기반 인터랙티브 UI. 탭 전환과 코드 형태 이력 표현.</p>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-check" style="color:#d97706;"></i> VS Code & Terminal 감성 UI</li>
+                        <li><i class="fa-solid fa-check" style="color:#d97706;"></i> 개발자 전문성 100% 어필</li>
+                    </ul>
+                </div>
+                <a href="./v4/" class="btn-view">v4 보러가기 <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 김형식. All rights reserved. Designed for GitHub Pages</p>
+    </footer>
+
+</body>
+</html>

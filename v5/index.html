@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김형식 | 백엔드 개발자 포트폴리오 (v5 Apple Bento Grid)</title>
+    <meta name="description" content="7년 차 백엔드 개발자 김형식의 최신 Bento Grid 트렌디 UI 컨셉 v5 포트폴리오입니다. C#, .NET Core, MSSQL 전문.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bento-theme">
+
+    <div class="bento-wrapper">
+        <!-- Header -->
+        <header class="bento-header">
+            <div class="logo">김형식 <span class="badge-tag">Backend Bento v5</span></div>
+            <nav class="bento-nav">
+                <a href="../" class="hub-link"><i class="fa-solid fa-house"></i> 허브 메인</a>
+                <a href="#projects">프로젝트 (15)</a>
+                <a href="#contact" class="btn-contact">연락하기</a>
+            </nav>
+        </header>
+
+        <!-- Bento Grid Layout -->
+        <main class="bento-grid">
+            <!-- Box 1: Big Hero Profile (Span 2x2) -->
+            <div class="bento-card hero-card spotlight">
+                <div class="card-badge"><i class="fa-solid fa-server"></i> 6년 4개월 경력 백엔드 개발자</div>
+                <h1 class="hero-title">전체 아키텍처를 조망하고<br><span class="accent-text">문제를 해결합니다</span></h1>
+                <p class="hero-desc">
+                    풀스택 실무 경험을 겸비하여 프론트엔드 및 타 파트와의 병목을 해소하고,<br>
+                    안정적이고 최적화된 B2B SaaS 및 백엔드 비즈니스 로직을 구현하는 김형식입니다.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="bento-btn primary">15개 프로젝트 둘러보기 <i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+            </div>
+
+            <!-- Box 2: Quick Stats Box -->
+            <div class="bento-card stat-bento spotlight">
+                <div class="stat-item">
+                    <div class="num accent-text">6.3+</div>
+                    <div class="lbl">개발 경력 (년)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="num accent-text">15개</div>
+                    <div class="lbl">수행 프로젝트</div>
+                </div>
+                <div class="stat-item">
+                    <div class="num accent-text">2개사</div>
+                    <div class="lbl">실무 경력</div>
+                </div>
+            </div>
+
+            <!-- Box 3: Primary Tech Stack Box -->
+            <div class="bento-card stack-bento spotlight">
+                <h3><i class="fa-solid fa-layer-group text-blue"></i> Core Tech Stack</h3>
+                <div class="bento-tags">
+                    <span class="tag active">C#</span>
+                    <span class="tag active">.NET Core</span>
+                    <span class="tag active">ASP.NET CORE</span>
+                    <span class="tag active">ASP.NET MVC</span>
+                    <span class="tag active">MSSQL</span>
+                    <span class="tag active">EF Core</span>
+                    <span class="tag active">RESTful API 설계</span>
+                    <span class="tag">Classic ASP</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag active">Git/GitHub</span>
+                    <span class="tag active">Slack</span>
+                    <span class="tag active">Monday</span>
+                </div>
+            </div>
+
+            <!-- Box 4: Experience Timeline -->
+            <div class="bento-card exp-bento spotlight">
+                <h3><i class="fa-solid fa-briefcase text-purple"></i> Work Experience</h3>
+                <div class="exp-list">
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <span class="company">(주)유엔이</span>
+                            <span class="period">2023.04 ~ 2026.05 (3년 2개월)</span>
+                        </div>
+                        <div class="role">안전보건서비스팀 · 대리 (백엔드/서버개발)</div>
+                        <p class="desc">안전보건 B2B SaaS 스마플, 어드민, PDF/Excel 보고서 엔진 및 MSSQL 최적화 개발</p>
+                    </div>
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <span class="company">케이알피스인포텍</span>
+                            <span class="period">2020.01 ~ 2023.02 (3년 2개월)</span>
+                        </div>
+                        <div class="role">기술연구소 · 대리 2년차 (Full-stack 개발)</div>
+                        <p class="desc">현대건설, 현대종합설계, 한화생명 등 다수 대기업 SI 웹 서비스 구축 및 운영</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 5: Projects Box (Span Full Grid Width) -->
+            <div class="bento-card projects-bento spotlight" id="projects">
+                <div class="p-header">
+                    <h2><i class="fa-solid fa-cubes text-cyan"></i> ALL PROJECTS (15)</h2>
+                    <div class="bento-filters">
+                        <button class="b-filter active" data-filter="all">전체 (15)</button>
+                        <button class="b-filter" data-filter="une">(주)유엔이 (3)</button>
+                        <button class="b-filter" data-filter="krpis">케이알피스인포텍 (11)</button>
+                        <button class="b-filter" data-filter="starflex">스타플렉스 외주 (1)</button>
+                    </div>
+                </div>
+
+                <div class="bento-project-grid" id="bentoProjectGrid">
+                    <!-- Project Cards -->
+                    <div class="p-card" data-company="une">
+                        <span class="c-badge badge-une">(주)유엔이</span>
+                        <h4 class="p-title">15. 스마플 어드민</h4>
+                        <p class="p-period">2023.08 ~ 2026.04 (32개월)</p>
+                        <p class="p-desc">구독 관리, 유저 통계 대시보드화, 고객센터 연동 기능 백엔드 구축</p>
+                        <div class="p-tech"><span>C#</span><span>ASP.NET Core</span><span>MSSQL</span></div>
+                    </div>
+
+                    <div class="p-card" data-company="une">
+                        <span class="c-badge badge-une">(주)유엔이</span>
+                        <h4 class="p-title">14. 스마트 보고서 서비스</h4>
+                        <p class="p-period">2023.04 ~ 2026.04 (36개월)</p>
+                        <p class="p-desc">안전관리 기록 데이터 기반 PDF & Excel 자동 보고서 출력 엔진 개발</p>
+                        <div class="p-tech"><span>C#</span><span>ASP.NET Core</span><span>MSSQL</span></div>
+                    </div>
+
+                    <div class="p-card" data-company="une">
+                        <span class="c-badge badge-une">(주)유엔이</span>
+                        <h4 class="p-title">13. 스마플 (안전보건 플랫폼)</h4>
+                        <p class="p-period">2023.04 ~ 2026.04 (36개월)</p>
+                        <p class="p-desc">안전점검, 안전교육, 사업장 연동 비즈니스 핵심 로직 설계</p>
+                        <div class="p-tech"><span>C#</span><span>.NET Core</span><span>MSSQL</span></div>
+                    </div>
+
+                    <div class="p-card" data-company="krpis">
+                        <span class="c-badge badge-krpis">케이알피스인포텍</span>
+                        <h4 class="p-title">12. 현대건설 RE100 시뮬레이션</h4>
+                        <p class="p-period">2022.09 ~ 2023.01 (5개월)</p>
+                        <p class="p-desc">RE100 시뮬레이션 시스템 화면 및 백엔드 풀스택 구축</p>
+                        <div class="p-tech"><span>C#</span><span>jQuery</span><span>MSSQL</span></div>
+                    </div>
+
+                    <div class="p-card" data-company="starflex">
+                        <span class="c-badge badge-starflex">스타플렉스 (외주)</span>
+                        <h4 class="p-title">11. 스타플렉스VR</h4>
+                        <p class="p-period">2022.05 ~ 2022.07 (2개월)</p>
+                        <p class="p-desc">관리자 웹 화면 개발 및 백엔드 기능 연동 구현</p>
+                        <div class="p-tech"><span>C#</span><span>ASP.NET Core 6</span><span>MySQL</span></div>
+                    </div>
+
+                    <div class="p-card" data-company="krpis">
+                        <span class="c-badge badge-krpis">케이알피스인포텍</span>
+                        <h4 class="p-title">10. 현대종합설계 근무시간 상한제 고도화</h4>
+                        <p class="p-period">2022.03 ~ 2023.07 (6개월)</p>
+                        <p class="p-desc">근무시간 관리 웹 서비스 확장 및 비즈니스 로직 고도화</p>
+                        <div class="p-tech"><span>C#</span><span>ASP.NET Core</span><span>MSSQL</span></div>
+                    </div>
+
+                    <div class="p-card" data-company="krpis">
+                        <span class="c-badge badge-krpis">케이알피스인포텍</span>
+                        <h4 class="p-title">9. 한화생명금융 자산관리</h4>
+                        <p class="p-period">2021.10 ~ 2022.02 (5개월)</p>
+                        <p class="p-desc">금융 자산 관리 웹 화면 개발 및 백엔드 데이터 연동</p>
+                        <div class="p-tech"><span>C#</span><span>ASP.NET Core</span><span>MSSQL</span></div>
+                    </div>
+
+                    <div class="p-card" data-company="krpis">
+                        <span class="c-badge badge-krpis">케이알피스인포텍</span>
+                        <h4 class="p-title">8. 현대종합설계 매체제어 System</h4>
+                        <p class="p-period">2021.08 ~ 2021.08 (1개월)</p>
+                        <p class="p-desc">매체제어 관리 웹 화면 개발 및 백엔드 연동</p>
+                        <div class="p-tech"><span>C#</span><span>ASP.NET Core</span><span>MSSQL</span></div>
+                    </div>
+
+                    <div class="p-card" data-company="krpis">
+                        <span class="c-badge badge-krpis">케이알피스인포텍</span>
+                        <h4 class="p-title">7. 현대종합설계 수행실적 관리</h4>
+                        <p class="p-period">2021.07 ~ 2021.09 (3개월)</p>
+                        <p class="p-desc">프로젝트 수행실적 전산화 웹 화면 개발 및 로직 구축</p>
+                        <div class="p-tech"><span>C#</span><span>ASP.NET Core</span><span>MSSQL</span></div>
+                    </div>
+
+                    <div class="p-card" data-company="krpis">
+                        <span class="c-badge badge-krpis">케이알피스인포텍</span>
+                        <h4 class="p-title">6. 현대건설 배구단 홈페이지</h4>
+                        <p class="p-period">2021.06 ~ 2021.12 (6개월)</p>
+                        <p class="p-desc">구단 공식 서비스 웹 화면 개발 및 DB 연동</p>
+                        <div class="p-tech"><span>C#</span><span>ASP.NET MVC</span><span>MSSQL</span></div>
+                    </div>
+
+                    <div class="p-card" data-company="krpis">
+                        <span class="c-badge badge-krpis">케이알피스인포텍</span>
+                        <h4 class="p-title">5. 현대스틸산업 근무시간 상한제</h4>
+                        <p class="p-period">2021.01 ~ 2023.01 (25개월)</p>
+                        <p class="p-desc">웹 서비스 비즈니스 로직 유지보수 및 오류 수정</p>
+                        <div class="p-tech"><span>Classic ASP</span><span>C#</span><span>MSSQL</span></div>
+                    </div>
+
+                    <div class="p-card" data-company="krpis">
+                        <span class="c-badge badge-krpis">케이알피스인포텍</span>
+                        <h4 class="p-title">4. 현대종합설계 통합 계정 관리(IM)</h4>
+                        <p class="p-period">2021.01 ~ 2023.01 (25개월)</p>
+                        <p class="p-desc">통합 계정 관리 서비스 비즈니스 로직 운영</p>
+                        <div class="p-tech"><span>Classic ASP</span><span>C#</span><span>MSSQL</span></div>
+                    </div>
+
+                    <div class="p-card" data-company="krpis">
+                        <span class="c-badge badge-krpis">케이알피스인포텍</span>
+                        <h4 class="p-title">3. 현대스틸산업 지침서 전산화</h4>
+                        <p class="p-period">2020.10 ~ 2021.01 (3개월)</p>
+                        <p class="p-desc">Lessons Learned 지침서 전산화 웹 및 데이터 연동</p>
+                        <div class="p-tech"><span>C#</span><span>ASP.NET Core</span><span>MSSQL</span></div>
+                    </div>
+
+                    <div class="p-card" data-company="krpis">
+                        <span class="c-badge badge-krpis">케이알피스인포텍</span>
+                        <h4 class="p-title">2. 현대종합설계 인사평가 System</h4>
+                        <p class="p-period">2020.07 ~ 2020.11 (4개월)</p>
+                        <p class="p-desc">인사평가 관리 웹 화면 개발 및 백엔드 구축</p>
+                        <div class="p-tech"><span>C#</span><span>ASP.NET MVC</span><span>MSSQL</span></div>
+                    </div>
+
+                    <div class="p-card" data-company="krpis">
+                        <span class="c-badge badge-krpis">케이알피스인포텍</span>
+                        <h4 class="p-title">1. 현대종합설계 근무시간 상한제</h4>
+                        <p class="p-period">2020.01 ~ 2023.01 (37개월)</p>
+                        <p class="p-desc">근무시간 관리 시스템 운영 및 지속적 유지보수</p>
+                        <div class="p-tech"><span>Classic ASP</span><span>C#</span><span>MSSQL</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 6: Contact Box -->
+            <div class="bento-card contact-bento spotlight" id="contact">
+                <h3><i class="fa-solid fa-paper-plane text-cyan"></i> Contact & Info</h3>
+                <div class="contact-info">
+                    <div class="info-row">
+                        <i class="fa-regular fa-envelope text-blue"></i>
+                        <span>hyo******@outlook.kr</span>
+                        <button class="bento-copy" id="copyEmailBtn" data-email="hyo******@outlook.kr"><i class="fa-regular fa-copy"></i></button>
+                    </div>
+                    <div class="info-row">
+                        <i class="fa-solid fa-location-dot text-purple"></i>
+                        <span>서울특별시 성북구</span>
+                    </div>
+                    <div class="info-row">
+                        <i class="fa-solid fa-certificate text-yellow"></i>
+                        <span>CCNA 자격 보유</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bento-footer">
+            <p>&copy; 2026 김형식. All rights reserved. Designed with Apple Bento Layout (v5)</p>
+        </footer>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
