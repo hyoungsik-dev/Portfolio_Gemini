@@ -37,7 +37,7 @@ jobs:
             - name: Upload Artifact
               uses: actions/upload-pages-artifact@v3
               with:
-                  path: "./type4/v1"
+                  path: "./type4/v2"
 
             # 4단계: 업로드된 아티팩트를 실제 라이브 웹사이트(GitHub Pages)로 최종 게시합니다.
             - name: Deploy to GitHub Pages
