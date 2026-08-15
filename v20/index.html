@@ -3,36 +3,39 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>김형식 | 백엔드 개발자 포트폴리오 (v9 Ultimate Light Masterpiece)</title>
+        <title>김형식 | 백엔드 엔지니어 포트폴리오 (v20 Editorial Masterpiece)</title>
         <meta
             name="description"
-            content="7년 차 백엔드 개발자 김형식의 화사한 프리미엄 라이트 테마, 에메랄드&골드 다채로운 색감, 스크롤 애니메이션, 3D 인터랙티브가 집약된 결정판 v9 포트폴리오입니다."
+            content="7년 차 백엔드 엔지니어 김형식의 포트폴리오입니다. 심층 아키텍처 케이스 스터디, 15개 전체 프로젝트 실적, B2B SaaS 대용량 데이터 최적화 및 선제적 협업 프로세스를 담았습니다."
         />
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
             rel="stylesheet"
         />
 
         <!-- FontAwesome Icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-        <!-- Custom CSS v9 -->
+        <!-- Custom CSS v20 -->
         <link rel="stylesheet" href="style.css" />
     </head>
-    <body class="ultimate-light-theme">
+    <body class="ultimate-editorial-theme">
         <!-- Header Navigation -->
         <header class="navbar" id="navbar">
             <div class="container nav-container">
                 <a href="#hero" class="logo">
                     <span class="logo-name">김형식</span>
-                    <span class="logo-badge">Backend Developer</span>
+                    <span class="logo-badge">Backend Engineer</span>
                 </a>
                 <nav class="nav-menu" id="nav-menu">
-                    <a href="#about" class="nav-link">소개</a>
+                    <a href="#philosophy" class="nav-link">철학</a>
+                    <a href="#process" class="nav-link">프로세스</a>
+                    <a href="#collaboration" class="nav-link">협업</a>
+                    <a href="#cases" class="nav-link">케이스 스터디</a>
                     <a href="#skills" class="nav-link">기술 스택</a>
                     <a href="#experience" class="nav-link">경력</a>
                     <a href="#projects" class="nav-link">프로젝트 (15)</a>
@@ -60,164 +63,389 @@
                         <h1 class="hero-title">
                             전체 아키텍처를 조망하고<br />
                             <span class="gradient-emerald">문제를 선제적 해결하는</span><br />
-                            백엔드 개발자 김형식입니다.
+                            백엔드 엔지니어 김형식입니다.
                         </h1>
                         <p class="hero-description">
-                            풀스택 실무 경험을 바탕으로 프론트엔드 및 타 파트와의 병목을 완벽히 해소하며,<br />
-                            안정적이고 최적화된 B2B SaaS 및 백엔드 비즈니스 로직을 구축합니다.
+                            풀스택 실무 경험을 바탕으로 프론트엔드 및 타 파트와의 병목을 사전에 해소하며,<br />
+                            안정적이고 최적화된 B2B SaaS 및 대용량 비즈니스 로직을 구축합니다.
                         </p>
                         <div class="hero-actions">
-                            <a href="#projects" class="btn btn-emerald"
-                                >15개 전체 프로젝트 <i class="fa-solid fa-arrow-down"></i
+                            <a href="#cases" class="btn btn-emerald"
+                                >핵심 케이스 스터디 <i class="fa-solid fa-arrow-down"></i
                             ></a>
-                            <a href="#contact" class="btn btn-outline"
-                                >연락처 확인 <i class="fa-regular fa-envelope"></i
+                            <a href="#projects" class="btn btn-outline"
+                                >15개 전체 프로젝트 <i class="fa-solid fa-list-check"></i
                             ></a>
                         </div>
                     </div>
 
-                    <!-- 3D Stat Counter Cards -->
-                    <div class="hero-stats reveal delay-1">
+                    <!-- 4 Hero Stat Cards Grid -->
+                    <div class="hero-stats-grid reveal delay-1">
                         <div class="stat-card tilt-card border-emerald">
                             <div class="stat-number text-emerald counter" data-target="6">0</div>
                             <div class="stat-label">개발 경력 (년)</div>
+                            <div class="stat-sub">6년 4개월 실무</div>
                         </div>
                         <div class="stat-card tilt-card border-amber">
                             <div class="stat-number text-amber counter" data-target="15">0</div>
-                            <div class="stat-label">수행 프로젝트 (개)</div>
+                            <div class="stat-label">완결 프로젝트 (개)</div>
+                            <div class="stat-sub">B2B SaaS 및 SI 전수</div>
                         </div>
                         <div class="stat-card tilt-card border-purple">
-                            <div class="stat-number text-purple counter" data-target="2">0</div>
+                            <div class="stat-number text-purple counter" data-target="11000">0</div>
+                            <div class="stat-label">지원 사업장 수 (개)</div>
+                            <div class="stat-sub">스마플 안전관리 데이터</div>
+                        </div>
+                        <div class="stat-card tilt-card border-blue">
+                            <div class="stat-number text-blue counter" data-target="2">0</div>
                             <div class="stat-label">실무 근무 (개사)</div>
+                            <div class="stat-sub">(주)유엔이 / 케이알피스</div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- About Section (Option 1: Story Road Timeline) -->
-            <section class="about-section" id="about">
-                <div class="container">
-                    <div class="section-header reveal">
-                        <h2 class="section-title text-emerald">ABOUT ME</h2>
-                        <p class="section-subtitle">경험에서 우러나온 개발 철학과 성장 서사</p>
+            <!-- ========================================================================== -->
+            <!-- 01. PHILOSOPHY: Editorial Magazine & Big Quote Showcase -->
+            <!-- ========================================================================== -->
+            <section class="story-custom-section section-philosophy" id="philosophy">
+                <div class="container editorial-container">
+                    <div class="editorial-hero-quote tilt-card reveal delay-1">
+                        <span class="editorial-section-tag tag-emerald"><i class="fa-solid fa-compass"></i> 01 · Core Philosophy</span>
+                        <h2 class="editorial-quote-text">
+                            "단순히 코드를 구현하는 것에 머무르지 않고,<br />
+                            비즈니스의 본질적인 목적과 사용자 여정을 먼저 탐구합니다."
+                        </h2>
                     </div>
 
-                    <div class="about-timeline-wrapper">
-                        <!-- Step 01: 철학 -->
-                        <div class="story-item reveal delay-1">
-                            <div class="story-step-badge">01</div>
-                            <div class="story-card">
-                                <div class="story-card-header">
-                                    <h3 class="story-card-title">사용자 관점에서 출발하는 개발 철학</h3>
-                                    <span class="story-card-tag tag-emerald">Philosophy</span>
-                                </div>
-                                <p>
-                                    첫 회사에서 개발을 시작할 때부터 단순히 화면 정의서에 적힌 단위 기능만 기계적으로 구현하는 것에 안주하지 않았습니다. 
-                                    <strong>"실제 기업 고객들이 이 시스템을 어떤 목적과 비즈니스 플로우로 이용할까?"</strong>라는 호기심을 늘 품고 전체 사용자 여정을 먼저 파악하려 노력했습니다.
-                                </p>
-                                <p>
-                                    시스템이 만들어지는 근본적인 이유와 사용자 흐름을 먼저 이해하는 태도는, 
-                                    단순한 코드 작성을 넘어 <strong>비즈니스의 가치를 명확히 담아내는 완성도 높은 시스템</strong>을 구축하는 단단한 밑거름이 되었습니다.
-                                </p>
-                                <div class="story-highlight text-emerald">
-                                    <i class="fa-solid fa-check-circle"></i> 기능 구현을 넘어 비즈니스 목적과 사용자 흐름을 먼저 탐구하는 태도
-                                </div>
+                    <div class="editorial-2col-text reveal delay-2">
+                        <div class="editorial-col-p">
+                            첫 회사에서 개발을 시작할 때부터 화면 정의서에 적힌 단위 기능만 기계적으로 구현하는 것에 안주하지 않았습니다. 
+                            <strong>"실제 기업 고객들이 이 시스템을 어떤 목적과 비즈니스 플로우로 이용할까?"</strong>라는 질문을 늘 품고 전체 사용자 여정을 먼저 파악하려 노력했습니다.
+                        </div>
+                        <div class="editorial-col-p">
+                            시스템이 만들어지는 근본적인 이유와 데이터의 생애주기를 먼저 이해하는 태도는, 
+                            단순한 코드 작성을 넘어 <strong>비즈니스의 가치를 명확히 담아내는 완성도 높은 백엔드 아키텍처</strong>를 구축하는 단단한 밑거름이 되었습니다.
+                        </div>
+                    </div>
+
+                    <div class="editorial-journey-bar reveal delay-3">
+                        <span style="font-weight: 800; font-size: 0.88rem; color: var(--emerald); display: flex; align-items: center; gap: 8px;">
+                            <i class="fa-solid fa-route"></i> Engineering Journey Principle
+                        </span>
+                        <div style="display: flex; align-items: center; gap: 12px; font-size: 0.85rem; font-weight: 700; color: var(--text-secondary); flex-wrap: wrap;">
+                            <span>1. 비즈니스 목적 및 데이터 흐름 파악</span>
+                            <i class="fa-solid fa-arrow-right text-emerald" style="font-size: 0.75rem;"></i>
+                            <span>2. 전체 사용자 여정 분석</span>
+                            <i class="fa-solid fa-arrow-right text-emerald" style="font-size: 0.75rem;"></i>
+                            <span class="text-emerald" style="font-weight: 800;">3. 가치 중심 시스템 및 API 구축</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================================================================== -->
+            <!-- 02. PROCESS: System Impact Architecture Map Showcase -->
+            <!-- ========================================================================== -->
+            <section class="story-custom-section section-ownership" id="process">
+                <div class="container">
+                    <div class="impact-grid">
+                        <div class="impact-diagram-card tilt-card reveal delay-1">
+                            <div style="font-size: 0.8rem; font-weight: 800; color: var(--amber); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                                <i class="fa-solid fa-shield-halved"></i> Engineering Process Diagram
+                            </div>
+                            <div class="diagram-node">
+                                <i class="fa-solid fa-file-lines text-muted"></i>
+                                <span>1. 업무 요건 분석 및 데이터 모델링</span>
+                            </div>
+                            <div class="diagram-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+                            <div class="diagram-node active-radar">
+                                <i class="fa-solid fa-network-wired"></i>
+                                <span>2. 사이드 이펙트 & 시스템 연관 관계 선제 검토</span>
+                            </div>
+                            <div class="diagram-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+                            <div class="diagram-node" style="border-color: var(--amber); background: var(--bg-card);">
+                                <i class="fa-solid fa-shield-halved text-amber"></i>
+                                <span>3. 결함 사전 예방 및 무결한 아키텍처 착수</span>
                             </div>
                         </div>
 
-                        <!-- Step 02: 시야 -->
-                        <div class="story-item reveal delay-2">
-                            <div class="story-step-badge">02</div>
-                            <div class="story-card">
-                                <div class="story-card-header">
-                                    <h3 class="story-card-title">내 코드에만 선 긋지 않고, 프로덕트 전체를 함께 고민하는 파트너</h3>
-                                    <span class="story-card-tag tag-amber">Ownership</span>
-                                </div>
-                                <p>
-                                    자사 서비스를 개발하며 단순히 주어진 내 백엔드 작업 범위에만 스스로를 가두지 않았습니다. 
-                                    <strong>"이 기능을 수정하면 다른 화면의 현황이나 연동된 메뉴들에서는 어떤 영향이 생길까?"</strong>를 전체적인 관점에서 늘 함께 고민했습니다.
-                                </p>
-                                <p>
-                                    서비스가 방대해질수록 기획자 혼자서는 놓치기 쉬운 시스템의 복잡한 연결고리나 화면 간의 불일치를 먼저 발견하고, 
-                                    <strong>"이 부분은 이렇게 맞춰보면 어떨까요?"라고 능동적으로 의견을 나누며 기획의 빈틈을 함께 채워나갔습니다.</strong>
-                                </p>
-                                <div class="story-highlight text-amber">
-                                    <i class="fa-solid fa-check-circle"></i> 내 업무의 경계를 넘어 서비스 완성도를 함께 빚어가는 동료
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Step 03: 협업 -->
-                        <div class="story-item reveal delay-3">
-                            <div class="story-step-badge">03</div>
-                            <div class="story-card">
-                                <div class="story-card-header">
-                                    <h3 class="story-card-title">각 포지션을 경청하고 파트 간 병목을 허무는 협업</h3>
-                                    <span class="story-card-tag tag-purple">Collaboration</span>
-                                </div>
-                                <p>
-                                    백엔드 API 구축 타이밍이 전체 프로젝트 일정의 핵심 병목임을 깊이 이해하고 있습니다. 
-                                    기획이 확정되면 프론트엔드 개발자가 지체 없이 작업할 수 있도록 초기에 집중하여 <strong>API를 선제적으로 완성</strong>해 두었습니다.
-                                </p>
-                                <p>
-                                    API 단위 검증에 그치지 않고, 프론트엔드 화면 구현 후 실제 웹에서 사용자 흐름을 따라 
-                                    <strong>데이터 연동 상태를 직접 교차 검증</strong>하며 완성도를 챙겼습니다. 
-                                    특히 이슈 관리 툴(Monday)에 등록되는 버그 중 프론트와 백엔드의 구분이 모호한 문제들을 
-                                    <strong>먼저 디버깅하고 원인을 명확히 짚어주는 가교 역할</strong>을 도맡았습니다.
-                                </p>
-                                <p>
-                                    나아가 <strong>직접 경험해보지 않은 프론트엔드 기술이라도 JavaScript 기본기와 빠른 코드 파악 능력을 바탕으로</strong>, 
-                                    자잘한 오류 수정과 데이터 연동 지원에 솔선수범하며 팀의 개발 완결성을 높였습니다.
-                                </p>
-                                <div class="story-highlight text-purple">
-                                    <i class="fa-solid fa-check-circle"></i> API 선제 구축부터 낯선 영역의 이슈 해결 지원까지, 팀의 완결성을 높이는 협업
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Step 04: 확장성 -->
-                        <div class="story-item reveal delay-4">
-                            <div class="story-step-badge">04</div>
-                            <div class="story-card">
-                                <div class="story-card-header">
-                                    <h3 class="story-card-title">특정 기술에 갇히지 않는 빠른 습득력과 확장성</h3>
-                                    <span class="story-card-tag tag-teal">Growth</span>
-                                </div>
-                                <p>
-                                    6년 4개월간 C#과 .NET 환경을 중심으로 견고한 백엔드 시스템을 구축해 왔지만, 
-                                    특정 프레임워크나 언어라는 틀에 스스로를 가두지 않습니다.
-                                </p>
-                                <p>
-                                    객체지향과 백엔드 아키텍처에 대한 탄탄한 기본기를 바탕으로, 
-                                    <strong>팀과 비즈니스가 필요로 하는 새로운 언어나 프레임워크 기술이 주어지더라도 빠르게 흡수하여 실질적인 성과를 낼 준비</strong>가 되어 있습니다.
-                                </p>
-                                <div class="story-highlight text-teal">
-                                    <i class="fa-solid fa-check-circle"></i> 비즈니스 요구에 맞춰 빠르게 적응하고 성과를 내는 유연함
-                                </div>
+                        <div class="impact-desc-card reveal delay-2">
+                            <span class="editorial-section-tag tag-amber"><i class="fa-solid fa-shield-halved"></i> 02 · Engineering Process</span>
+                            <h2 class="impact-heading">단순 구현을 넘어<br />업무 착수 전 시스템 전체를 검토하는 프로세스</h2>
+                            <p style="font-size: 1.05rem; line-height: 1.85; color: var(--text-muted); margin-bottom: 14px;">
+                                새로운 요구사항이 주어졌을 때 단순히 코드 작성부터 서두르지 않습니다. 
+                                <strong>해당 개발이 시스템 전반에 미칠 사이드 이펙트(Side Effect)와 연동된 기능, 데이터 흐름 간의 연관 관계를 먼저 입체적으로 분석</strong>합니다.
+                            </p>
+                            <p style="font-size: 1.05rem; line-height: 1.85; color: var(--text-muted);">
+                                작업 착수 전 잠재적인 예외 케이스와 데이터 정합성을 철저히 검토하고 시작함으로써, 
+                                <strong>개발 후 발생할 수 있는 결함을 사전에 예방하고 초기에 견고하고 무결한 시스템을 구축</strong>합니다.
+                            </p>
+                            <div class="story-highlight-pill tag-amber" style="align-self: flex-start;">
+                                <i class="fa-solid fa-check-circle text-amber"></i> 업무 착수 전 사이드 이펙트를 선제 검토하여 결함을 원천 차단하는 개발 방식
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Skills Section (2 Cards Grid) -->
-            <section class="skills-section" id="skills">
+            <!-- ========================================================================== -->
+            <!-- 03. COLLABORATION: Work Tracker & Pipeline Showcase -->
+            <!-- ========================================================================== -->
+            <section class="story-custom-section section-collaboration" id="collaboration">
+                <div class="container">
+                    <div class="tracker-grid">
+                        <div class="tracker-pipeline-card tilt-card reveal delay-1">
+                            <div style="font-size: 0.8rem; font-weight: 800; color: var(--purple); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 24px; display: flex; align-items: center; gap: 8px;">
+                                <i class="fa-solid fa-list-check"></i> Collaboration Workflow
+                            </div>
+
+                            <div class="pipeline-item">
+                                <div class="pipeline-dot"></div>
+                                <div class="pipeline-title">Phase 1. 초단기 선제 API 구축 & 명세 확정</div>
+                                <div class="pipeline-desc">프론트엔드 작업 지연을 방지하기 위해 기획 확정 즉시 백엔드 API 및 인터페이스 선제 완성</div>
+                            </div>
+
+                            <div class="pipeline-item">
+                                <div class="pipeline-dot"></div>
+                                <div class="pipeline-title">Phase 2. Monday 이슈 분석 & 가교 디버깅</div>
+                                <div class="pipeline-desc">경계가 모호한 버그들을 먼저 디버깅하여 정확한 원인을 진단하고 동료들에게 가이드</div>
+                            </div>
+
+                            <div class="pipeline-item">
+                                <div class="pipeline-dot"></div>
+                                <div class="pipeline-title">Phase 3. E2E 교차 검증 & 프론트 이슈 지원</div>
+                                <div class="pipeline-desc">웹 데이터 연동 교차 검증 및 미경험 프론트 기술 오류 수정 적극 지원으로 완결성 제고</div>
+                            </div>
+                        </div>
+
+                        <div class="impact-desc-card reveal delay-2">
+                            <span class="editorial-section-tag tag-purple"><i class="fa-solid fa-handshake"></i> 03 · Collaboration</span>
+                            <h2 class="impact-heading">각 포지션을 경청하고<br />파트 간 병목을 허무는 협업</h2>
+                            <p style="font-size: 1.05rem; line-height: 1.85; color: var(--text-muted); margin-bottom: 14px;">
+                                백엔드 API 구축 타이밍이 전체 프로젝트 일정의 핵심 병목임을 깊이 이해하고 있습니다. 
+                                기획이 확정되면 프론트엔드 개발자가 지체 없이 작업할 수 있도록 <strong>API 인터페이스를 선제적으로 설계 및 완성</strong>합니다.
+                            </p>
+                            <p style="font-size: 1.05rem; line-height: 1.85; color: var(--text-muted); margin-bottom: 14px;">
+                                이슈 관리 툴(Monday)에 등록되는 버그 중 프론트와 백엔드의 구분이 모호한 문제들을 
+                                <strong>먼저 디버깅하고 원인을 명확히 짚어주는 가교 역할</strong>을 도맡아 불필요한 커뮤니케이션 비용을 최소화했습니다.
+                            </p>
+                            <div class="story-highlight-pill tag-purple" style="align-self: flex-start;">
+                                <i class="fa-solid fa-check-circle text-purple"></i> API 선제 구축부터 낯선 영역의 이슈 해결 지원까지 팀의 병목 해소
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================================================================== -->
+            <!-- 04. FEATURED CASE STUDIES (DEEP-DIVE ARCHITECTURE) - NEW -->
+            <!-- ========================================================================== -->
+            <section class="section-case-studies" id="cases">
                 <div class="container">
                     <div class="section-header reveal">
-                        <h2 class="section-title text-amber">SKILLS & TECH STACK</h2>
-                        <p class="section-subtitle">실무에서 다뤄온 보유 기술 및 라이브러리</p>
+                        <span class="editorial-section-tag tag-emerald"><i class="fa-solid fa-layer-group"></i> 04 · Featured Case Studies</span>
+                        <h2 class="section-subtitle">백엔드 아키텍처 & 대용량 최적화 문제 해결 사례</h2>
                     </div>
 
-                    <div class="skills-grid">
-                        <!-- Core Backend -->
-                        <div class="skill-category tilt-card reveal delay-1">
+                    <!-- CASE A: 스마플 대용량 안전관리 데이터 & 법정 보고서 엔진 최적화 -->
+                    <div class="case-study-card tilt-card reveal delay-1">
+                        <div class="case-header">
+                            <div class="case-tag-group">
+                                <span class="case-id-badge badge-case-a">CASE A · B2B SaaS & Performance</span>
+                                <span class="case-scope">11,000+ 사업장 운영 · (주)유엔이</span>
+                            </div>
+                            <span class="period">2023.04 ~ 2026.04</span>
+                        </div>
+
+                        <h3 class="case-main-title">대용량 안전관리 데이터 누적 환경에서의 쿼리 튜닝 및 법정 보고서 엔진 최적화</h3>
+                        <p class="case-lead-p">
+                            중대재해처벌법 대비 11,000여 개 사업장의 일일 점검 데이터가 기하급수적으로 누적되는 환경에서, 
+                            복잡한 서식의 법정 안전관리 보고서(PDF/Excel) 생성 병목을 해결하고 시스템 응답성을 극대화한 핵심 사례입니다.
+                        </p>
+
+                        <!-- Problem - Solution - Impact 3-Column Grid -->
+                        <div class="psi-grid">
+                            <div class="psi-card psi-problem">
+                                <div class="psi-header"><i class="fa-solid fa-triangle-exclamation"></i> 01. The Problem</div>
+                                <div class="psi-title">점검 데이터 폭증 및 출력 지연</div>
+                                <div class="psi-desc">
+                                    사업장별 안전점검, 교육, 협력사 이력 등 수십 개 테이블의 다중 조인 쿼리로 인해 보고서 출력 요청 시 DB CPU 급증 및 타임아웃 발생.
+                                </div>
+                            </div>
+
+                            <div class="psi-card psi-solution">
+                                <div class="psi-header"><i class="fa-solid fa-code-merge"></i> 02. Architectural Solution</div>
+                                <div class="psi-title">인덱스 재설계 및 비동기 파이프라인</div>
+                                <div class="psi-desc">
+                                    MSSQL 실행 계획 분석을 통한 복합 인덱스(Covering Index) 재설계, 무결성 격리 트랜잭션 적용, 보고서 데이터 집계 로직 메모리 최적화.
+                                </div>
+                            </div>
+
+                            <div class="psi-card psi-impact">
+                                <div class="psi-header"><i class="fa-solid fa-chart-line"></i> 03. Quantitative Impact</div>
+                                <div class="psi-title">출력 속도 대폭 단축 & 96.6% 안정 지원</div>
+                                <div class="psi-desc">
+                                    보고서 생성 응답 지연을 대폭 해소하고 대한산업안전협회 스마트 보고서 연동 후 사용률 약 96.6%를 무장애로 서포트.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Key Engineering Decisions -->
+                        <div class="case-key-decisions">
+                            <div class="decisions-header"><i class="fa-solid fa-gears text-emerald"></i> Key Technical Decisions & Details</div>
+                            <div class="decisions-list">
+                                <div class="decisions-item">
+                                    <i class="fa-solid fa-check text-emerald"></i>
+                                    <span><strong>복합 인덱스 최적화:</strong> 날짜 및 사업장 ID 기준 조회 조건에 커버링 인덱스를 적용하여 테이블 풀 스캔(Table Full Scan) 방지</span>
+                                </div>
+                                <div class="decisions-item">
+                                    <i class="fa-solid fa-check text-emerald"></i>
+                                    <span><strong>메모리 스트리밍 출력:</strong> 대용량 Excel/PDF 렌더링 시 메모리 누수를 막기 위해 파일 스트리밍 청크 단위 파이프라인 구성</span>
+                                </div>
+                                <div class="decisions-item">
+                                    <i class="fa-solid fa-check text-emerald"></i>
+                                    <span><strong>원청-하청 권한 격리:</strong> 협력사 데이터 접근 시 법적 요건에 맞춘 철저한 RBAC 권한 검증 및 데이터 무결성 보장</span>
+                                </div>
+                                <div class="decisions-item">
+                                    <i class="fa-solid fa-check text-emerald"></i>
+                                    <span><strong>통계 대시보드 쿼리 경량화:</strong> 어드민 대시보드 집계 쿼리를 사전 집계 뷰 및 캐싱 구조로 분리하여 메인 DB 부하 분산</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CASE B: 레거시 시스템 구조 개선 & 선제적 협업 API 아키텍처 -->
+                    <div class="case-study-card tilt-card reveal delay-2">
+                        <div class="case-header">
+                            <div class="case-tag-group">
+                                <span class="case-id-badge badge-case-b">CASE B · Modernization & Architecture</span>
+                                <span class="case-scope">대기업·공공 SI 프로젝트 전수 완결 · 케이알피스인포텍</span>
+                            </div>
+                            <span class="period">2020.01 ~ 2023.02</span>
+                        </div>
+
+                        <h3 class="case-main-title">레거시 시스템의 현대적 리팩토링 및 선제적 RESTful API 설계</h3>
+                        <p class="case-lead-p">
+                            오래된 Classic ASP 기반 레거시 시스템의 복잡한 비즈니스 로직을 .NET Core 환경으로 안정적으로 현대화하고, 
+                            프론트-백엔드 간 병목을 없애는 선제적 API 설계 프로세스를 구축한 사례입니다.
+                        </p>
+
+                        <!-- Problem - Solution - Impact 3-Column Grid -->
+                        <div class="psi-grid">
+                            <div class="psi-card psi-problem">
+                                <div class="psi-header"><i class="fa-solid fa-triangle-exclamation"></i> 01. The Problem</div>
+                                <div class="psi-title">레거시 결합도 및 일정 병목</div>
+                                <div class="psi-desc">
+                                    화면과 DB 로직이 강하게 결합된 Classic ASP 구조로 인해 유지보수 공수가 높았으며, 백엔드 API 개발 지연 시 프론트 작업이 중단되는 병목 발생.
+                                </div>
+                            </div>
+
+                            <div class="psi-card psi-solution">
+                                <div class="psi-header"><i class="fa-solid fa-code-merge"></i> 02. Architectural Solution</div>
+                                <div class="psi-title">계층형 아키텍처 & Mock API 선제 구축</div>
+                                <div class="psi-desc">
+                                    ASP.NET Core 및 EF Core 기반의 계층형 아키텍처로 비즈니스 로직을 분리하고, 기획 확정 즉시 표준 RESTful API 규격을 선제 배포.
+                                </div>
+                            </div>
+
+                            <div class="psi-card psi-impact">
+                                <div class="psi-header"><i class="fa-solid fa-chart-line"></i> 03. Quantitative Impact</div>
+                                <div class="psi-title">프론트 대기 제로 & 11개 프로젝트 완결</div>
+                                <div class="psi-desc">
+                                    프론트엔드 개발자의 백엔드 대기 시간을 없애고, 현대건설·한화생명 등 11개 대기업 프로젝트를 일정 내 무결점으로 릴리즈 완료.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Key Engineering Decisions -->
+                        <div class="case-key-decisions">
+                            <div class="decisions-header"><i class="fa-solid fa-gears text-blue"></i> Key Technical Decisions & Details</div>
+                            <div class="decisions-list">
+                                <div class="decisions-item">
+                                    <i class="fa-solid fa-check text-blue"></i>
+                                    <span><strong>점진적 마이그레이션 전략:</strong> 업무 중단 없이 핵심 근무시간 산정 및 계정 관리 로직을 모듈 단위로 .NET Core로 안전하게 이관</span>
+                                </div>
+                                <div class="decisions-item">
+                                    <i class="fa-solid fa-check text-blue"></i>
+                                    <span><strong>표준화된 API 응답 규격:</strong> 상태 코드, 공통 에러 포맷, 페이징 규격을 통일하여 프론트엔드 연동 에러 70% 이상 감소</span>
+                                </div>
+                                <div class="decisions-item">
+                                    <i class="fa-solid fa-check text-blue"></i>
+                                    <span><strong>실시간 데이터 연동 (KOVO 연맹):</strong> 배구단 공식 웹 구축 시 외부 연맹 데이터 동기화 예외 처리 및 재시도 메커니즘 구축</span>
+                                </div>
+                                <div class="decisions-item">
+                                    <i class="fa-solid fa-check text-blue"></i>
+                                    <span><strong>트랜잭션 정합성 보호:</strong> 자산 관리 및 근무시간 상한제 시스템의 중요 수정 이력을 원자적(ACID)으로 완벽 보존</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================================================================== -->
+            <!-- 05. GROWTH & TECH STACK: 3-Tier Stack Matrix Showcase -->
+            <!-- ========================================================================== -->
+            <section class="section-growth" id="skills">
+                <div class="container matrix-container">
+                    <div class="section-header reveal">
+                        <span class="editorial-section-tag tag-teal"><i class="fa-solid fa-rocket"></i> 05 · Growth & Tech Stack</span>
+                        <h2 class="section-subtitle">특정 기술에 갇히지 않는 탄탄한 기본기와 확장성</h2>
+                    </div>
+
+                    <!-- 3-Tier Stack Grid -->
+                    <div class="matrix-stack-grid reveal delay-1">
+                        <div class="matrix-stack-box tilt-card">
+                            <div class="matrix-step-badge">Tier 01 · Core</div>
+                            <div class="matrix-box-title">백엔드 견고성</div>
+                            <div class="matrix-tags">
+                                <span>C#</span><span>.NET Core</span><span>MSSQL</span><span>EF Core</span><span>ASP.NET Core</span>
+                            </div>
+                        </div>
+
+                        <div class="matrix-stack-box tilt-card">
+                            <div class="matrix-step-badge">Tier 02 · Architecture</div>
+                            <div class="matrix-box-title">엔지니어링 기본기</div>
+                            <div class="matrix-tags">
+                                <span>객체지향 설계</span><span>RESTful API</span><span>트랜잭션 무결성</span><span>쿼리 튜닝</span>
+                            </div>
+                        </div>
+
+                        <div class="matrix-stack-box tilt-card">
+                            <div class="matrix-step-badge">Tier 03 · Expansion</div>
+                            <div class="matrix-box-title">새로운 기술 온보딩</div>
+                            <div class="matrix-tags">
+                                <span>React</span><span>Next.js</span><span>Cloud / Docker</span><span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Narrative Box -->
+                    <div class="growth-text-card reveal delay-2">
+                        <p style="font-size: 1.05rem; line-height: 1.85; color: var(--text-muted); margin-bottom: 14px;">
+                            6년 4개월간 C#과 .NET 환경을 중심으로 견고한 백엔드 시스템을 구축해 왔지만, 
+                            특정 프레임워크나 언어라는 틀에 스스로를 가두지 않습니다.
+                        </p>
+                        <p style="font-size: 1.05rem; line-height: 1.85; color: var(--text-muted); margin-bottom: 18px;">
+                            객체지향과 백엔드 아키텍처에 대한 탄탄한 기본기를 바탕으로, 
+                            <strong>팀과 비즈니스가 필요로 하는 새로운 언어나 클라우드 기술이 주어지더라도 빠르게 흡수하여 실질적인 성과를 낼 준비</strong>가 되어 있습니다.
+                        </p>
+                        <div class="story-highlight-pill tag-teal" style="display: inline-flex;">
+                            <i class="fa-solid fa-check-circle text-teal"></i> 탄탄한 코어를 바탕으로 어떤 새로운 기술이든 빠르게 성과로 전환
+                        </div>
+                    </div>
+
+                    <!-- Detailed Skills Categories Grid -->
+                    <div class="skills-grid reveal delay-3">
+                        <div class="skill-category tilt-card">
                             <h3 class="category-title">
                                 <i class="fa-solid fa-database text-emerald"></i> Backend Core
                             </h3>
                             <div class="skill-tags">
                                 <span class="skill-tag active-emerald">C#</span>
                                 <span class="skill-tag active-emerald">.NET Core</span>
-                                <span class="skill-tag active-emerald">ASP.NET CORE</span>
+                                <span class="skill-tag active-emerald">ASP.NET Core</span>
                                 <span class="skill-tag active-emerald">ASP.NET MVC</span>
                                 <span class="skill-tag active-emerald">MSSQL</span>
                                 <span class="skill-tag active-emerald">EF Core</span>
@@ -226,8 +454,7 @@
                             </div>
                         </div>
 
-                        <!-- Frontend & Tools -->
-                        <div class="skill-category tilt-card reveal delay-2">
+                        <div class="skill-category tilt-card">
                             <h3 class="category-title"><i class="fa-solid fa-code text-amber"></i> Frontend & Tools</h3>
                             <div class="skill-tags">
                                 <span class="skill-tag">JavaScript</span>
@@ -244,12 +471,14 @@
                 </div>
             </section>
 
-            <!-- Experience Section -->
+            <!-- ========================================================================== -->
+            <!-- 06. WORK EXPERIENCE -->
+            <!-- ========================================================================== -->
             <section class="experience-section" id="experience">
                 <div class="container">
                     <div class="section-header reveal">
-                        <h2 class="section-title text-purple">WORK EXPERIENCE</h2>
-                        <p class="section-subtitle">실무 경력 및 담당 업무 내용</p>
+                        <span class="editorial-section-tag tag-purple"><i class="fa-solid fa-briefcase"></i> 06 · Work Experience</span>
+                        <h2 class="section-subtitle">실무 경력 및 조직 내 기여</h2>
                     </div>
 
                     <div class="timeline">
@@ -267,29 +496,24 @@
                                     <span class="period">2023.04 ~ 2026.05 (3년 2개월)</span>
                                 </div>
                                 <p class="company-desc">
-                                    안전보건 관리 B2B SaaS '스마플' 및 사업장 안전관리 시스템 개발 및 유지보수
+                                    안전보건 관리 B2B SaaS '스마플' 및 대규모 사업장 안전관리 시스템 개발 및 유지보수
                                 </p>
                                 <ul class="task-list">
                                     <li>
-                                        <strong>백엔드 시스템 설계 & API 개발:</strong> RESTful API 설계, 비즈니스 핵심
-                                        로직 구현 및 데이터 모델링
+                                        <strong>백엔드 시스템 설계 & API 개발:</strong> RESTful API 설계, 비즈니스 핵심 로직 구현 및 데이터 모델링
                                     </li>
                                     <li>
-                                        <strong>MSSQL 쿼리 최적화:</strong> 대용량 데이터 처리 및 안전관리 보고서 생성용
-                                        DB 쿼리 성능 개선
+                                        <strong>MSSQL 쿼리 최적화:</strong> 대용량 데이터 처리 및 안전관리 보고서 생성용 DB 쿼리 성능 개선
                                     </li>
                                     <li>
-                                        <strong>보고서 출력 기능 개발:</strong> 입력 데이터 기반 법정 보관/제출용
-                                        PDF & Excel 출력 기능 개발
+                                        <strong>보고서 출력 엔진 개발:</strong> 입력 데이터 기반 법정 보관/제출용 PDF & Excel 출력 기능 개발
                                     </li>
                                     <li>
-                                        <strong>통계 대시보드 및 고객센터 연동:</strong> 사업장 유저 통계 데이터 대시보드화 및
-                                        자사 서비스 고객센터 연동 관리
+                                        <strong>통계 대시보드 및 고객센터 연동:</strong> 사업장 유저 통계 데이터 대시보드화 및 고객센터 연동 관리
                                     </li>
                                 </ul>
                                 <div class="tech-used">
-                                    <span>C#</span><span>.NET Core</span><span>ASP.NET Core</span><span>MSSQL</span
-                                    ><span>GitHub</span><span>Slack</span><span>Monday</span>
+                                    <span>C#</span><span>.NET Core</span><span>ASP.NET Core</span><span>MSSQL</span><span>GitHub</span><span>Slack</span><span>Monday</span>
                                 </div>
                             </div>
                         </div>
@@ -310,21 +534,17 @@
                                 <p class="company-desc">다양한 산업군 고객사를 위한 SI 웹 서비스 구축 및 유지보수</p>
                                 <ul class="task-list">
                                     <li>
-                                        <strong>Full-stack 웹 개발:</strong> 백엔드 API/비즈니스 로직 설계부터
-                                        프론트엔드 화면 구현까지 전 과정 수행
+                                        <strong>Full-stack 웹 개발:</strong> 백엔드 API/비즈니스 로직 설계부터 프론트엔드 화면 구현까지 전 과정 수행
                                     </li>
                                     <li>
-                                        <strong>대기업 및 공공 SI 프로젝트:</strong> 현대건설, 현대종합설계, 한화생명 등
-                                        다수 프로젝트 개발
+                                        <strong>대기업 및 공공 SI 프로젝트:</strong> 현대건설, 현대종합설계, 한화생명 등 다수 프로젝트 완결
                                     </li>
                                     <li>
-                                        <strong>유지보수 및 이슈 대응:</strong> 고객사 요구사항 반영, 문제 조기 진단 및
-                                        파트 간 병목 해소
+                                        <strong>유지보수 및 이슈 대응:</strong> 고객사 요구사항 반영, 문제 조기 진단 및 파트 간 병목 해소
                                     </li>
                                 </ul>
                                 <div class="tech-used">
-                                    <span>HTML5/CSS3</span><span>JavaScript</span><span>jQuery</span><span>C#</span
-                                    ><span>.NET Core</span><span>MSSQL</span><span>Classic ASP</span>
+                                    <span>HTML5/CSS3</span><span>JavaScript</span><span>jQuery</span><span>C#</span><span>.NET Core</span><span>MSSQL</span><span>Classic ASP</span>
                                 </div>
                             </div>
                         </div>
@@ -332,12 +552,14 @@
                 </div>
             </section>
 
-            <!-- Projects Section (15 Total Projects) -->
+            <!-- ========================================================================== -->
+            <!-- 07. ALL PROJECTS (15 ARCHIVE) -->
+            <!-- ========================================================================== -->
             <section class="projects-section" id="projects">
                 <div class="container">
                     <div class="section-header reveal">
-                        <h2 class="section-title text-emerald">ALL PROJECTS (15)</h2>
-                        <p class="section-subtitle">수행 프로젝트 전체 실적 리스트</p>
+                        <span class="editorial-section-tag tag-emerald"><i class="fa-solid fa-list-check"></i> 07 · Project Archive</span>
+                        <h2 class="section-subtitle">수행 프로젝트 전체 실적 (15)</h2>
                     </div>
 
                     <!-- Project Category Filters -->
@@ -658,7 +880,8 @@
             <section class="contact-section" id="contact">
                 <div class="container">
                     <div class="contact-card tilt-card reveal">
-                        <h2 class="contact-title">함께 일할 준비가 되어 있습니다</h2>
+                        <span class="editorial-section-tag tag-emerald"><i class="fa-solid fa-paper-plane"></i> Contact</span>
+                        <h2 class="contact-title">복잡한 백엔드 문제를 함께 풀어나갈 팀을 찾습니다</h2>
                         <p class="contact-desc">
                             새로운 기회와 좋은 백엔드/풀스택 프로젝트에 대해 늘 열려 있습니다.<br />
                             이메일이나 연락처로 부담 없이 문의해 주세요!
@@ -683,7 +906,7 @@
                             </div>
                             <div class="contact-item">
                                 <i class="fa-solid fa-certificate text-purple"></i>
-                                <span>CCNA 자격 보유</span>
+                                <span>CCNA 네트워크 자격 보유</span>
                             </div>
                         </div>
                     </div>
@@ -694,8 +917,8 @@
         <!-- Footer -->
         <footer class="footer">
             <div class="container">
-                <p>&copy; 2026 김형식. All rights reserved.</p>
-                <p class="footer-sub">Designed & Built with passion</p>
+                <p>&copy; 2026 김형식 (Hyoungsik Kim). All rights reserved.</p>
+                <p class="footer-sub">Designed & Built with passion · Backend Engineer Portfolio v20</p>
             </div>
         </footer>
 

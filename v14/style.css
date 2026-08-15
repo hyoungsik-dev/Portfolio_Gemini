@@ -193,108 +193,128 @@ section { padding: 100px 0; }
 .section-title { font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; font-weight: 800; }
 .section-subtitle { font-size: 1.8rem; font-weight: 800; color: var(--text-primary); }
 
-/* About Section (Option 1: Story Road Timeline Layout) */
-.about-timeline-wrapper {
-    position: relative;
-    max-width: 920px;
-    margin: 0 auto;
-}
-.about-timeline-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    bottom: 20px;
-    left: 28px;
-    width: 3px;
-    background: linear-gradient(180deg, #059669 0%, #d97706 50%, #4f46e5 100%);
-    border-radius: 9999px;
-}
-.story-item {
-    position: relative;
-    padding-left: 76px;
-    margin-bottom: 40px;
-}
-.story-item:last-child { margin-bottom: 0; }
-.story-step-badge {
-    position: absolute;
-    left: 10px;
-    top: 24px;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: var(--bg-card);
-    border: 3px solid var(--emerald);
-    color: var(--emerald);
-    font-weight: 800;
-    font-size: 0.85rem;
+/* Full-Screen Story Chapters */
+.chapter-section {
+    min-height: 82vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 0 6px var(--bg-main), 0 4px 12px rgba(5, 150, 105, 0.25);
-    z-index: 2;
-}
-.story-item:nth-child(2) .story-step-badge { border-color: var(--amber); color: var(--amber); }
-.story-item:nth-child(3) .story-step-badge { border-color: var(--purple); color: var(--purple); }
-.story-item:nth-child(4) .story-step-badge { border-color: #0d9488; color: #0d9488; }
-
-.story-card {
-    background: var(--bg-card);
-    padding: 34px 30px;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow-soft);
-    position: relative;
-    transition: var(--transition);
-}
-.story-card:hover {
-    border-color: var(--emerald-border);
-    box-shadow: 0 12px 30px rgba(5, 150, 105, 0.08);
-    transform: translateY(-4px);
-}
-.story-card-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 16px;
-    padding-bottom: 12px;
+    padding: 100px 0;
     border-bottom: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
 }
-.story-card-title {
-    font-size: 1.25rem;
-    font-weight: 800;
-    color: var(--text-primary);
+.chapter-philosophy {
+    background: radial-gradient(circle at 10% 30%, rgba(5, 150, 105, 0.06) 0%, transparent 60%), var(--bg-card);
 }
-.story-card-tag {
-    font-size: 0.76rem;
-    font-weight: 800;
-    padding: 4px 12px;
-    border-radius: var(--radius-full);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+.chapter-ownership {
+    background: radial-gradient(circle at 90% 30%, rgba(217, 119, 6, 0.06) 0%, transparent 60%), var(--bg-alt);
 }
-.tag-emerald { background: var(--emerald-soft); color: var(--emerald); border: 1px solid var(--emerald-border); }
-.tag-amber { background: var(--amber-soft); color: var(--amber); border: 1px solid var(--amber-border); }
-.tag-purple { background: var(--purple-soft); color: var(--purple); border: 1px solid var(--purple-border); }
-.tag-teal { background: #ccfbf1; color: #0d9488; border: 1px solid #99f6e4; }
+.chapter-collaboration {
+    background: radial-gradient(circle at 10% 70%, rgba(79, 70, 229, 0.06) 0%, transparent 60%), var(--bg-card);
+}
+.chapter-growth {
+    background: radial-gradient(circle at 90% 70%, rgba(13, 148, 136, 0.06) 0%, transparent 60%), var(--bg-alt);
+}
 
-.story-card p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    line-height: 1.75;
+.chapter-grid {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 64px;
+    align-items: center;
 }
-.story-card p + p { margin-top: 10px; }
-.story-highlight {
-    margin-top: 18px;
-    padding: 10px 16px;
-    background: var(--bg-alt);
-    border-radius: var(--radius-md);
-    font-size: 0.88rem;
-    font-weight: 600;
-    display: flex;
+
+/* Left Column */
+.chapter-left {
+    position: relative;
+}
+.chapter-watermark-num {
+    font-size: 5.5rem;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--text-primary);
+    opacity: 0.08;
+    position: absolute;
+    top: -40px;
+    left: -10px;
+    z-index: 1;
+    user-select: none;
+}
+.chapter-tag {
+    display: inline-flex;
     align-items: center;
     gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 2;
+}
+.chapter-heading {
+    font-size: 2.15rem;
+    font-weight: 800;
+    line-height: 1.32;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 2;
+}
+.chapter-quote-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 22px 24px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.65;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 14px;
+}
+.chapter-quote-card i {
+    font-size: 1.3rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+/* Right Column */
+.chapter-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.chapter-right p {
+    color: var(--text-muted);
+    font-size: 1.08rem;
+    line-height: 1.85;
+}
+.chapter-right strong {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+.chapter-pill {
+    margin-top: 10px;
+    padding: 14px 22px;
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    align-self: flex-start;
+    box-shadow: var(--shadow-soft);
+}
+
+@media (max-width: 992px) {
+    .chapter-section { padding: 70px 0; min-height: auto; }
+    .chapter-grid { grid-template-columns: 1fr; gap: 36px; }
+    .chapter-heading { font-size: 1.7rem; }
+    .chapter-watermark-num { font-size: 4rem; top: -30px; }
+    .chapter-right p { font-size: 1rem; }
 }
 
 /* Skills */

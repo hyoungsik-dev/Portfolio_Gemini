@@ -94,105 +94,201 @@
                 </div>
             </section>
 
-            <!-- About Section (Option 1: Story Road Timeline) -->
-            <section class="about-section" id="about">
+            <!-- ========================================== -->
+            <!-- HUB 1: 엔지니어링 철학과 오너십 (Left Badge + Right Text) -->
+            <!-- ========================================== -->
+            <section class="dual-hub-section hub-engineering" id="about">
                 <div class="container">
-                    <div class="section-header reveal">
-                        <h2 class="section-title text-emerald">ABOUT ME</h2>
-                        <p class="section-subtitle">경험에서 우러나온 개발 철학과 성장 서사</p>
+                    <div class="dual-hub-header reveal">
+                        <span class="dual-hub-badge text-emerald"><i class="fa-solid fa-compass"></i> PART 01 · CORE MINDSET</span>
+                        <h2 class="dual-hub-title">엔지니어링 철학과 프로덕트 오너십</h2>
                     </div>
 
-                    <div class="about-timeline-wrapper">
-                        <!-- Step 01: 철학 -->
-                        <div class="story-item reveal delay-1">
-                            <div class="story-step-badge">01</div>
-                            <div class="story-card">
-                                <div class="story-card-header">
-                                    <h3 class="story-card-title">사용자 관점에서 출발하는 개발 철학</h3>
-                                    <span class="story-card-tag tag-emerald">Philosophy</span>
+                    <div class="story-stack-wrapper">
+                        <!-- Story Block 01: 개발 철학 -->
+                        <div class="story-block border-left-emerald tilt-card reveal delay-1">
+                            <div class="story-block-header">
+                                <span class="story-block-tag text-emerald"><i class="fa-solid fa-compass"></i> 01 · Philosophy</span>
+                                <h3 class="story-block-title">사용자 관점에서 출발하는 개발 철학</h3>
+                            </div>
+                            <div class="story-block-grid">
+                                <!-- Left: Quotes & Flow Badges -->
+                                <div class="story-visual-side">
+                                    <div class="story-quote-box">
+                                        <i class="fa-solid fa-quote-left text-emerald"></i>
+                                        <span>"단순히 코드를 짜는 것에 머무르지 않고, 비즈니스의 본질과 사용자 여정을 먼저 탐구합니다."</span>
+                                    </div>
+                                    <div class="flow-badge-box">
+                                        <div class="flow-badge-label text-emerald"><i class="fa-solid fa-route"></i> Engineering Approach</div>
+                                        <div class="flow-vertical-steps">
+                                            <div class="flow-step-item"><span>1. 비즈니스 목적 파악</span></div>
+                                            <div class="flow-step-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+                                            <div class="flow-step-item"><span>2. 사용자 여정 분석</span></div>
+                                            <div class="flow-step-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+                                            <div class="flow-step-item" style="border-color: var(--emerald); color: var(--emerald); font-weight: 800;"><span>3. 가치 중심 시스템 구축</span></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p>
-                                    첫 회사에서 개발을 시작할 때부터 단순히 화면 정의서에 적힌 단위 기능만 기계적으로 구현하는 것에 안주하지 않았습니다. 
-                                    <strong>"실제 기업 고객들이 이 시스템을 어떤 목적과 비즈니스 플로우로 이용할까?"</strong>라는 호기심을 늘 품고 전체 사용자 여정을 먼저 파악하려 노력했습니다.
-                                </p>
-                                <p>
-                                    시스템이 만들어지는 근본적인 이유와 사용자 흐름을 먼저 이해하는 태도는, 
-                                    단순한 코드 작성을 넘어 <strong>비즈니스의 가치를 명확히 담아내는 완성도 높은 시스템</strong>을 구축하는 단단한 밑거름이 되었습니다.
-                                </p>
-                                <div class="story-highlight text-emerald">
-                                    <i class="fa-solid fa-check-circle"></i> 기능 구현을 넘어 비즈니스 목적과 사용자 흐름을 먼저 탐구하는 태도
+
+                                <!-- Right: Narrative Description -->
+                                <div class="story-desc-side">
+                                    <p>
+                                        첫 회사에서 개발을 시작할 때부터 단순히 화면 정의서에 적힌 단위 기능만 기계적으로 구현하는 것에 안주하지 않았습니다. 
+                                        <strong>"실제 기업 고객들이 이 시스템을 어떤 목적과 비즈니스 플로우로 이용할까?"</strong>라는 호기심을 늘 품고 전체 사용자 여정을 먼저 파악하려 노력했습니다.
+                                    </p>
+                                    <p>
+                                        시스템이 만들어지는 근본적인 이유와 사용자 흐름을 먼저 이해하는 태도는, 
+                                        단순한 코드 작성을 넘어 <strong>비즈니스의 가치를 명확히 담아내는 완성도 높은 시스템</strong>을 구축하는 단단한 밑거름이 되었습니다.
+                                    </p>
+                                    <div class="story-highlight-pill tag-emerald">
+                                        <i class="fa-solid fa-check-circle text-emerald"></i> 기능 구현을 넘어 비즈니스 목적과 사용자 흐름을 먼저 탐구하는 태도
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Step 02: 시야 -->
-                        <div class="story-item reveal delay-2">
-                            <div class="story-step-badge">02</div>
-                            <div class="story-card">
-                                <div class="story-card-header">
-                                    <h3 class="story-card-title">내 코드에만 선 긋지 않고, 프로덕트 전체를 함께 고민하는 파트너</h3>
-                                    <span class="story-card-tag tag-amber">Ownership</span>
+                        <!-- Story Block 02: 프로덕트 오너십 -->
+                        <div class="story-block border-left-amber tilt-card reveal delay-2">
+                            <div class="story-block-header">
+                                <span class="story-block-tag text-amber"><i class="fa-solid fa-lightbulb"></i> 02 · Ownership</span>
+                                <h3 class="story-block-title">내 코드에만 선 긋지 않고, 프로덕트 전체를 함께 고민하는 파트너</h3>
+                            </div>
+                            <div class="story-block-grid">
+                                <!-- Left: Quotes & Flow Badges -->
+                                <div class="story-visual-side">
+                                    <div class="story-quote-box">
+                                        <i class="fa-solid fa-quote-left text-amber"></i>
+                                        <span>"내 업무의 경계를 넘어 서비스 완성도를 함께 빚어가는 동료로 일합니다."</span>
+                                    </div>
+                                    <div class="flow-badge-box">
+                                        <div class="flow-badge-label text-amber"><i class="fa-solid fa-network-wired"></i> Impact Analysis Loop</div>
+                                        <div class="flow-vertical-steps">
+                                            <div class="flow-step-item"><span>1. 기능 수정 요청</span></div>
+                                            <div class="flow-step-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+                                            <div class="flow-step-item"><span>2. 연동 화면 영향도 분석</span></div>
+                                            <div class="flow-step-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+                                            <div class="flow-step-item" style="border-color: var(--amber); color: var(--amber); font-weight: 800;"><span>3. 기획 보완 & 무결성 방어</span></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p>
-                                    자사 서비스를 개발하며 단순히 주어진 내 백엔드 작업 범위에만 스스로를 가두지 않았습니다. 
-                                    <strong>"이 기능을 수정하면 다른 화면의 현황이나 연동된 메뉴들에서는 어떤 영향이 생길까?"</strong>를 전체적인 관점에서 늘 함께 고민했습니다.
-                                </p>
-                                <p>
-                                    서비스가 방대해질수록 기획자 혼자서는 놓치기 쉬운 시스템의 복잡한 연결고리나 화면 간의 불일치를 먼저 발견하고, 
-                                    <strong>"이 부분은 이렇게 맞춰보면 어떨까요?"라고 능동적으로 의견을 나누며 기획의 빈틈을 함께 채워나갔습니다.</strong>
-                                </p>
-                                <div class="story-highlight text-amber">
-                                    <i class="fa-solid fa-check-circle"></i> 내 업무의 경계를 넘어 서비스 완성도를 함께 빚어가는 동료
+
+                                <!-- Right: Narrative Description -->
+                                <div class="story-desc-side">
+                                    <p>
+                                        자사 서비스를 개발하며 단순히 주어진 내 백엔드 작업 범위에만 스스로를 가두지 않았습니다. 
+                                        <strong>"이 기능을 수정하면 다른 화면의 현황이나 연동된 메뉴들에서는 어떤 영향이 생길까?"</strong>를 전체적인 관점에서 늘 함께 고민했습니다.
+                                    </p>
+                                    <p>
+                                        서비스가 방대해질수록 기획자 혼자서는 놓치기 쉬운 시스템의 복잡한 연결고리나 화면 간의 불일치를 먼저 발견하고, 
+                                        <strong>"이 부분은 이렇게 맞춰보면 어떨까요?"라고 능동적으로 의견을 나누며 기획의 빈틈을 함께 채워나갔습니다.</strong>
+                                    </p>
+                                    <div class="story-highlight-pill tag-amber">
+                                        <i class="fa-solid fa-check-circle text-amber"></i> 기능 수정 시 발생할 수 있는 사이드 이펙트를 사전에 차단하는 안정적 설계
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================================== -->
+            <!-- HUB 2: 협업과 기술 확장성 (Left Badge + Right Text) -->
+            <!-- ========================================== -->
+            <section class="dual-hub-section hub-collaboration" id="about-part2">
+                <div class="container">
+                    <div class="dual-hub-header reveal">
+                        <span class="dual-hub-badge text-purple"><i class="fa-solid fa-handshake"></i> PART 02 · TEAM & GROWTH</span>
+                        <h2 class="dual-hub-title">파트너십과 지속적 기술 확장성</h2>
+                    </div>
+
+                    <div class="story-stack-wrapper">
+                        <!-- Story Block 03: 협업 & 신뢰 -->
+                        <div class="story-block border-left-purple tilt-card reveal delay-1">
+                            <div class="story-block-header">
+                                <span class="story-block-tag text-purple"><i class="fa-solid fa-handshake"></i> 03 · Collaboration</span>
+                                <h3 class="story-block-title">각 포지션을 경청하고 파트 간 병목을 허무는 협업</h3>
+                            </div>
+                            <div class="story-block-grid">
+                                <!-- Left: Quotes & Flow Badges -->
+                                <div class="story-visual-side">
+                                    <div class="story-quote-box">
+                                        <i class="fa-solid fa-quote-left text-purple"></i>
+                                        <span>"API 선제 구축부터 낯선 영역의 이슈 해결 지원까지, 팀의 완결성을 높입니다."</span>
+                                    </div>
+                                    <div class="flow-badge-box">
+                                        <div class="flow-badge-label text-purple"><i class="fa-solid fa-diagram-project"></i> Team Synergy Pipeline</div>
+                                        <div class="flow-vertical-steps">
+                                            <div class="flow-step-item"><span>1. 초단기 API 선제 완성</span></div>
+                                            <div class="flow-step-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+                                            <div class="flow-step-item"><span>2. Monday 이슈 분석/중재</span></div>
+                                            <div class="flow-step-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+                                            <div class="flow-step-item" style="border-color: var(--purple); color: var(--purple); font-weight: 800;"><span>3. E2E 검증 & 프론트 지원</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Right: Narrative Description -->
+                                <div class="story-desc-side">
+                                    <p>
+                                        백엔드 API 구축 타이밍이 전체 프로젝트 일정의 핵심 병목임을 깊이 이해하고 있습니다. 
+                                        기획이 확정되면 프론트엔드 개발자가 지체 없이 작업할 수 있도록 초기에 집중하여 <strong>API를 선제적으로 완성</strong>해 두었습니다.
+                                    </p>
+                                    <p>
+                                        API 단위 검증에 그치지 않고, 프론트엔드 화면 구현 후 실제 웹에서 사용자 흐름을 따라 
+                                        <strong>데이터 연동 상태를 직접 교차 검증</strong>하며 완성도를 챙겼습니다. 
+                                        특히 이슈 관리 툴(Monday)에 등록되는 버그 중 프론트와 백엔드의 구분이 모호한 문제들을 
+                                        <strong>먼저 디버깅하고 원인을 명확히 짚어주는 가교 역할</strong>을 도맡았습니다.
+                                    </p>
+                                    <p>
+                                        나아가 <strong>직접 경험해보지 않은 프론트엔드 기술이라도 JavaScript 기본기와 빠른 코드 파악 능력을 바탕으로</strong>, 
+                                        자잘한 오류 수정과 데이터 연동 지원에 솔선수범하며 팀의 개발 완결성을 높였습니다.
+                                    </p>
+                                    <div class="story-highlight-pill tag-purple">
+                                        <i class="fa-solid fa-check-circle text-purple"></i> API 선제 구축부터 모호한 이슈 원인 분석·지원까지, 팀의 완결성을 높이는 협업
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Step 03: 협업 -->
-                        <div class="story-item reveal delay-3">
-                            <div class="story-step-badge">03</div>
-                            <div class="story-card">
-                                <div class="story-card-header">
-                                    <h3 class="story-card-title">각 포지션을 경청하고 파트 간 병목을 허무는 협업</h3>
-                                    <span class="story-card-tag tag-purple">Collaboration</span>
-                                </div>
-                                <p>
-                                    백엔드 API 구축 타이밍이 전체 프로젝트 일정의 핵심 병목임을 깊이 이해하고 있습니다. 
-                                    기획이 확정되면 프론트엔드 개발자가 지체 없이 작업할 수 있도록 초기에 집중하여 <strong>API를 선제적으로 완성</strong>해 두었습니다.
-                                </p>
-                                <p>
-                                    API 단위 검증에 그치지 않고, 프론트엔드 화면 구현 후 실제 웹에서 사용자 흐름을 따라 
-                                    <strong>데이터 연동 상태를 직접 교차 검증</strong>하며 완성도를 챙겼습니다. 
-                                    특히 이슈 관리 툴(Monday)에 등록되는 버그 중 프론트와 백엔드의 구분이 모호한 문제들을 
-                                    <strong>먼저 디버깅하고 원인을 명확히 짚어주는 가교 역할</strong>을 도맡았습니다.
-                                </p>
-                                <p>
-                                    나아가 <strong>직접 경험해보지 않은 프론트엔드 기술이라도 JavaScript 기본기와 빠른 코드 파악 능력을 바탕으로</strong>, 
-                                    자잘한 오류 수정과 데이터 연동 지원에 솔선수범하며 팀의 개발 완결성을 높였습니다.
-                                </p>
-                                <div class="story-highlight text-purple">
-                                    <i class="fa-solid fa-check-circle"></i> API 선제 구축부터 낯선 영역의 이슈 해결 지원까지, 팀의 완결성을 높이는 협업
-                                </div>
+                        <!-- Story Block 04: 기술 확장성 -->
+                        <div class="story-block border-left-teal tilt-card reveal delay-2">
+                            <div class="story-block-header">
+                                <span class="story-block-tag text-teal"><i class="fa-solid fa-rocket"></i> 04 · Growth</span>
+                                <h3 class="story-block-title">특정 기술에 갇히지 않는 빠른 습득력과 확장성</h3>
                             </div>
-                        </div>
-
-                        <!-- Step 04: 확장성 -->
-                        <div class="story-item reveal delay-4">
-                            <div class="story-step-badge">04</div>
-                            <div class="story-card">
-                                <div class="story-card-header">
-                                    <h3 class="story-card-title">특정 기술에 갇히지 않는 빠른 습득력과 확장성</h3>
-                                    <span class="story-card-tag tag-teal">Growth</span>
+                            <div class="story-block-grid">
+                                <!-- Left: Quotes & Flow Badges -->
+                                <div class="story-visual-side">
+                                    <div class="story-quote-box">
+                                        <i class="fa-solid fa-quote-left text-teal"></i>
+                                        <span>"탄탄한 코어를 바탕으로 어떤 새로운 기술이든 빠르게 성과로 전환할 준비."</span>
+                                    </div>
+                                    <div class="flow-badge-box">
+                                        <div class="flow-badge-label text-teal"><i class="fa-solid fa-cubes-stacked"></i> Adaptability Foundation</div>
+                                        <div class="flow-vertical-steps">
+                                            <div class="flow-step-item"><span>1. C# / .NET Core 코어</span></div>
+                                            <div class="flow-step-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+                                            <div class="flow-step-item"><span>2. 객체지향·아키텍처 기본기</span></div>
+                                            <div class="flow-step-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+                                            <div class="flow-step-item" style="border-color: #0d9488; color: #0d9488; font-weight: 800;"><span>3. 신규 기술 신속 온보딩</span></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p>
-                                    6년 4개월간 C#과 .NET 환경을 중심으로 견고한 백엔드 시스템을 구축해 왔지만, 
-                                    특정 프레임워크나 언어라는 틀에 스스로를 가두지 않습니다.
-                                </p>
-                                <p>
-                                    객체지향과 백엔드 아키텍처에 대한 탄탄한 기본기를 바탕으로, 
-                                    <strong>팀과 비즈니스가 필요로 하는 새로운 언어나 프레임워크 기술이 주어지더라도 빠르게 흡수하여 실질적인 성과를 낼 준비</strong>가 되어 있습니다.
-                                </p>
-                                <div class="story-highlight text-teal">
-                                    <i class="fa-solid fa-check-circle"></i> 비즈니스 요구에 맞춰 빠르게 적응하고 성과를 내는 유연함
+
+                                <!-- Right: Narrative Description -->
+                                <div class="story-desc-side">
+                                    <p>
+                                        6년 4개월간 C#과 .NET 환경을 중심으로 견고한 백엔드 시스템을 구축해 왔지만, 
+                                        특정 프레임워크나 언어라는 틀에 스스로를 가두지 않습니다.
+                                    </p>
+                                    <p>
+                                        객체지향과 백엔드 아키텍처에 대한 탄탄한 기본기를 바탕으로, 
+                                        <strong>팀과 비즈니스가 필요로 하는 새로운 언어나 프레임워크 기술이 주어지더라도 빠르게 흡수하여 실질적인 성과를 낼 준비</strong>가 되어 있습니다.
+                                    </p>
+                                    <div class="story-highlight-pill tag-teal">
+                                        <i class="fa-solid fa-check-circle text-teal"></i> 비즈니스 요구에 맞춰 빠르게 적응하고 성과를 내는 유연함
+                                    </div>
                                 </div>
                             </div>
                         </div>

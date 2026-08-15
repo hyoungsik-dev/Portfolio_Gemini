@@ -193,108 +193,200 @@ section { padding: 100px 0; }
 .section-title { font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; font-weight: 800; }
 .section-subtitle { font-size: 1.8rem; font-weight: 800; color: var(--text-primary); }
 
-/* About Section (Option 1: Story Road Timeline Layout) */
-.about-timeline-wrapper {
-    position: relative;
-    max-width: 920px;
-    margin: 0 auto;
-}
-.about-timeline-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    bottom: 20px;
-    left: 28px;
-    width: 3px;
-    background: linear-gradient(180deg, #059669 0%, #d97706 50%, #4f46e5 100%);
-    border-radius: 9999px;
-}
-.story-item {
-    position: relative;
-    padding-left: 76px;
-    margin-bottom: 40px;
-}
-.story-item:last-child { margin-bottom: 0; }
-.story-step-badge {
-    position: absolute;
-    left: 10px;
-    top: 24px;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: var(--bg-card);
-    border: 3px solid var(--emerald);
-    color: var(--emerald);
-    font-weight: 800;
-    font-size: 0.85rem;
+/* /* Standalone Story Showcase Sections (v18: 1 Chapter = 1 Dedicated Showcase) */
+.story-showcase-section {
+    padding: 100px 0;
+    border-bottom: 1px solid var(--border-color);
+    min-height: 78vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 0 6px var(--bg-main), 0 4px 12px rgba(5, 150, 105, 0.25);
-    z-index: 2;
-}
-.story-item:nth-child(2) .story-step-badge { border-color: var(--amber); color: var(--amber); }
-.story-item:nth-child(3) .story-step-badge { border-color: var(--purple); color: var(--purple); }
-.story-item:nth-child(4) .story-step-badge { border-color: #0d9488; color: #0d9488; }
-
-.story-card {
-    background: var(--bg-card);
-    padding: 34px 30px;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow-soft);
     position: relative;
+    overflow: hidden;
+}
+.showcase-philosophy {
+    background: radial-gradient(circle at 10% 20%, rgba(5, 150, 105, 0.06) 0%, transparent 60%), var(--bg-card);
+}
+.showcase-ownership {
+    background: radial-gradient(circle at 90% 20%, rgba(217, 119, 6, 0.06) 0%, transparent 60%), var(--bg-alt);
+}
+.showcase-collaboration {
+    background: radial-gradient(circle at 10% 80%, rgba(79, 70, 229, 0.06) 0%, transparent 60%), var(--bg-card);
+}
+.showcase-growth {
+    background: radial-gradient(circle at 90% 80%, rgba(13, 148, 136, 0.06) 0%, transparent 60%), var(--bg-alt);
+}
+
+.story-showcase-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 48px 44px;
+    box-shadow: var(--shadow-soft);
+    max-width: 1080px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
     transition: var(--transition);
 }
-.story-card:hover {
-    border-color: var(--emerald-border);
-    box-shadow: 0 12px 30px rgba(5, 150, 105, 0.08);
+.story-showcase-card:hover {
     transform: translateY(-4px);
+    box-shadow: 0 20px 44px rgba(15, 23, 42, 0.08);
 }
-.story-card-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 16px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--border-color);
+.story-showcase-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 6px;
 }
-.story-card-title {
-    font-size: 1.25rem;
-    font-weight: 800;
-    color: var(--text-primary);
-}
-.story-card-tag {
-    font-size: 0.76rem;
-    font-weight: 800;
-    padding: 4px 12px;
-    border-radius: var(--radius-full);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-.tag-emerald { background: var(--emerald-soft); color: var(--emerald); border: 1px solid var(--emerald-border); }
-.tag-amber { background: var(--amber-soft); color: var(--amber); border: 1px solid var(--amber-border); }
-.tag-purple { background: var(--purple-soft); color: var(--purple); border: 1px solid var(--purple-border); }
-.tag-teal { background: #ccfbf1; color: #0d9488; border: 1px solid #99f6e4; }
+.border-left-emerald::before { background: var(--emerald); }
+.border-left-amber::before { background: var(--amber); }
+.border-left-purple::before { background: var(--purple); }
+.border-left-teal::before { background: #0d9488; }
 
-.story-card p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    line-height: 1.75;
+/* Showcase Header */
+.showcase-header {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
 }
-.story-card p + p { margin-top: 10px; }
-.story-highlight {
-    margin-top: 18px;
-    padding: 10px 16px;
+.showcase-watermark {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--text-primary);
+    opacity: 0.06;
+    position: absolute;
+    top: -24px;
+    right: 0;
+    user-select: none;
+}
+.showcase-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+.showcase-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1.35;
+    color: var(--text-primary);
+    max-width: 860px;
+}
+
+/* Showcase Body Grid (Left Badge/Flow + Right Text) */
+.showcase-grid {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 48px;
+    align-items: flex-start;
+}
+
+/* Left Side: Quotes & Vertical Flow */
+.showcase-visual-col {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.showcase-quote-box {
     background: var(--bg-alt);
-    border-radius: var(--radius-md);
-    font-size: 0.88rem;
+    border: 1px solid var(--border-color);
+    padding: 20px 22px;
+    border-radius: var(--radius-lg);
+    font-size: 0.94rem;
     font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.65;
+    display: flex;
+    gap: 14px;
+}
+.showcase-quote-box i {
+    font-size: 1.25rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.showcase-flow-box {
+    background: var(--bg-alt);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 20px 22px;
+}
+.showcase-flow-label {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
     display: flex;
     align-items: center;
     gap: 8px;
+}
+.showcase-flow-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.showcase-step-item {
+    padding: 10px 14px;
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+.showcase-step-arrow {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    line-height: 1;
+}
+
+/* Right Side: Narrative Text */
+.showcase-desc-col {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.showcase-desc-col p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+.showcase-desc-col strong {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+.showcase-pill {
+    margin-top: 10px;
+    padding: 12px 18px;
+    border-radius: var(--radius-md);
+    font-size: 0.92rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    align-self: flex-start;
+}
+
+@media (max-width: 992px) {
+    .story-showcase-section { padding: 60px 0; min-height: auto; }
+    .showcase-grid { grid-template-columns: 1fr; gap: 28px; }
+    .story-showcase-card { padding: 32px 24px; }
+    .showcase-title { font-size: 1.45rem; }
+    .showcase-watermark { display: none; }
+    .story-showcase-card::before { width: 100%; height: 4px; bottom: auto; right: 0; }
 }
 
 /* Skills */
