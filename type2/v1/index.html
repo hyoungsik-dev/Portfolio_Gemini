@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>김형식 | 백엔드 엔지니어 포트폴리오 (Type 2 · v1)</title>
+        <meta
+            name="description"
+            content="7년 차 백엔드 엔지니어 김형식의 포트폴리오입니다. 도메인 문제 해결과 실무 경험을 명확히 정리한 Type 2 버전입니다."
+        />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- FontAwesome Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+        <style>
+            :root {
+                --bg: #ffffff;
+                --bg-subtle: #f8fafc;
+                --bg-card: #ffffff;
+                --text-main: #0f172a;
+                --text-muted: #475569;
+                --text-light: #94a3b8;
+                --emerald: #059669;
+                --emerald-soft: #ecfdf5;
+                --emerald-border: #a7f3d0;
+                --border: #e2e8f0;
+                --radius: 12px;
+            }
+
+            * { box-sizing: border-box; margin: 0; padding: 0; }
+            body {
+                font-family: 'Plus Jakarta Sans', 'Noto Sans KR', sans-serif;
+                background-color: var(--bg);
+                color: var(--text-main);
+                line-height: 1.7;
+                word-break: keep-all;
+            }
+            .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+            header.navbar {
+                position: sticky; top: 0; background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px); border-bottom: 1px solid var(--border);
+                padding: 16px 0; z-index: 100;
+            }
+            .nav-inner { display: flex; justify-content: space-between; align-items: center; }
+            .nav-logo { font-weight: 800; font-size: 1.2rem; color: var(--text-main); text-decoration: none; }
+            .nav-links { display: flex; gap: 20px; }
+            .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; font-weight: 600; }
+            .nav-links a:hover { color: var(--emerald); }
+
+            section { padding: 80px 0; border-bottom: 1px solid var(--border); }
+            .section-tag {
+                display: inline-block; font-size: 0.8rem; font-weight: 800;
+                letter-spacing: 1.5px; text-transform: uppercase; color: var(--emerald);
+                background: var(--emerald-soft); padding: 4px 12px; border-radius: 9999px;
+                margin-bottom: 12px;
+            }
+            .section-title { font-size: 1.8rem; font-weight: 800; margin-bottom: 24px; }
+
+            /* 1. Intro */
+            .hero-title { font-size: 2.4rem; font-weight: 900; line-height: 1.3; margin-bottom: 16px; }
+            .hero-desc { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 32px; }
+            .metrics-grid {
+                display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 16px; margin-top: 24px;
+            }
+            .metric-box {
+                background: var(--bg-subtle); border: 1px solid var(--border);
+                border-radius: var(--radius); padding: 20px;
+            }
+            .metric-num { font-size: 1.8rem; font-weight: 800; color: var(--emerald); }
+            .metric-label { font-size: 0.88rem; color: var(--text-muted); font-weight: 600; }
+
+            /* 2. Skills */
+            .skills-group { display: flex; flex-direction: column; gap: 20px; }
+            .skill-row { background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+            .skill-row-title { font-size: 1rem; font-weight: 800; margin-bottom: 10px; color: var(--text-main); }
+            .skill-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+            .skill-badge {
+                background: #ffffff; border: 1px solid var(--border); padding: 6px 14px;
+                border-radius: 6px; font-size: 0.85rem; font-weight: 600; color: var(--text-muted);
+            }
+            .skill-badge.highlight { background: var(--emerald-soft); color: var(--emerald); border-color: var(--emerald-border); font-weight: 700; }
+
+            /* 3. Experience & Problem Solving */
+            .exp-card {
+                background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius);
+                padding: 32px; margin-bottom: 36px; box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.04);
+            }
+            .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; flex-wrap: wrap; gap: 8px; }
+            .company-name { font-size: 1.4rem; font-weight: 800; }
+            .exp-period { font-size: 0.88rem; color: var(--text-light); font-weight: 600; }
+            .exp-role { font-size: 0.95rem; font-weight: 700; color: var(--emerald); margin-bottom: 16px; }
+            
+            .problem-block {
+                background: var(--bg-subtle); border-left: 4px solid var(--emerald);
+                padding: 18px 20px; border-radius: 0 8px 8px 0; margin-top: 20px;
+            }
+            .problem-title { font-size: 1rem; font-weight: 800; margin-bottom: 8px; color: var(--text-main); }
+            .problem-desc { font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; }
+
+            /* 4. Projects Archive */
+            .project-list { display: flex; flex-direction: column; gap: 16px; }
+            .project-row {
+                background: var(--bg-subtle); border: 1px solid var(--border);
+                border-radius: var(--radius); padding: 20px 24px;
+                display: flex; justify-content: space-between; align-items: flex-start;
+                flex-wrap: wrap; gap: 12px;
+            }
+            .project-info { max-width: 680px; }
+            .project-name { font-size: 1.1rem; font-weight: 800; margin-bottom: 4px; }
+            .project-summary { font-size: 0.9rem; color: var(--text-muted); }
+            .project-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+            .project-tag { font-size: 0.75rem; background: #ffffff; border: 1px solid var(--border); padding: 2px 8px; border-radius: 4px; }
+
+            footer { padding: 40px 0; text-align: center; color: var(--text-light); font-size: 0.85rem; }
+        </style>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="navbar">
+            <div class="container nav-inner">
+                <a href="#intro" class="nav-logo">김형식 · Backend Engineer</a>
+                <nav class="nav-links">
+                    <a href="#intro">소개</a>
+                    <a href="#skills">기술 스택</a>
+                    <a href="#experience">경력 & 해결 과제</a>
+                    <a href="#projects">프로젝트 (15)</a>
+                    <a href="#contact">연락처</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!-- 1. 소개 (Intro & Identity) -->
+            <section id="intro">
+                <div class="container">
+                    <span class="section-tag">01 · Introduction</span>
+                    <h1 class="hero-title">
+                        전체 아키텍처를 조망하고,<br />
+                        문제를 선제적으로 해결하는 백엔드 개발자입니다.
+                    </h1>
+                    <p class="hero-desc">
+                        풀스택 실무 경험을 바탕으로 프론트엔드 및 타 파트와의 병목을 사전에 해소하며,<br />
+                        안정적이고 최적화된 B2B SaaS 및 대용량 비즈니스 로직을 구축해 왔습니다.
+                    </p>
+
+                    <div class="metrics-grid">
+                        <div class="metric-box">
+                            <div class="metric-num">6년 4개월</div>
+                            <div class="metric-label">총 개발 실무 경력</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-num">15개</div>
+                            <div class="metric-label">완결 프로젝트 실적</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-num">2개사</div>
+                            <div class="metric-label">실무 근무 이력</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. 기술 스택 (Tech Stack) -->
+            <section id="skills">
+                <div class="container">
+                    <span class="section-tag">02 · Tech Stack</span>
+                    <h2 class="section-title">다룰 줄 아는 기술과 도구</h2>
+
+                    <div class="skills-group">
+                        <div class="skill-row">
+                            <div class="skill-row-title">Backend Core & Framework</div>
+                            <div class="skill-badges">
+                                <span class="skill-badge highlight">C#</span>
+                                <span class="skill-badge highlight">.NET Core</span>
+                                <span class="skill-badge highlight">ASP.NET Core</span>
+                                <span class="skill-badge highlight">ASP.NET MVC</span>
+                                <span class="skill-badge highlight">EF Core</span>
+                                <span class="skill-badge highlight">RESTful API 설계</span>
+                                <span class="skill-badge">Classic ASP</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-row">
+                            <div class="skill-row-title">Database & Modeling</div>
+                            <div class="skill-badges">
+                                <span class="skill-badge highlight">MSSQL</span>
+                                <span class="skill-badge highlight">쿼리 튜닝 & 실행계획</span>
+                                <span class="skill-badge highlight">트랜잭션 무결성</span>
+                                <span class="skill-badge">MySQL</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-row">
+                            <div class="skill-row-title">Frontend & Tools</div>
+                            <div class="skill-badges">
+                                <span class="skill-badge">JavaScript</span>
+                                <span class="skill-badge">jQuery</span>
+                                <span class="skill-badge">HTML5 / CSS3</span>
+                                <span class="skill-badge">Ajax</span>
+                                <span class="skill-badge">Bootstrap</span>
+                                <span class="skill-badge">Git / GitHub</span>
+                                <span class="skill-badge">Monday</span>
+                                <span class="skill-badge">Slack</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. 근무 이력 & 핵심 문제 해결 (Experience & Problem Solving) -->
+            <section id="experience">
+                <div class="container">
+                    <span class="section-tag">03 · Experience & Problem Solving</span>
+                    <h2 class="section-title">근무 이력 및 주요 해결 과제</h2>
+
+                    <!-- Experience 1: (주)유엔이 -->
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <h3 class="company-name">(주)유엔이</h3>
+                            <span class="exp-period">2023.04 ~ 2026.05 (3년 2개월)</span>
+                        </div>
+                        <div class="exp-role">안전보건서비스팀 · 대리 (백엔드/서버개발)</div>
+                        <p style="color: var(--text-muted); margin-bottom: 16px;">
+                            안전보건 관리 B2B SaaS '스마플' 및 대규모 사업장 안전관리 시스템 백엔드 개발 및 유지보수
+                        </p>
+
+                        <!-- 핵심 문제 해결 블록 -->
+                        <div class="problem-block">
+                            <div class="problem-title">💡 핵심 해결 과제 1: 대용량 데이터 누적 환경에서의 보고서 엔진 및 쿼리 최적화</div>
+                            <p class="problem-desc">
+                                11,000+ 사업장의 점검 데이터 누적 시 복잡한 서식의 법정 보고서(PDF/Excel) 생성 병목 발생.<br />
+                                <strong>해결:</strong> MSSQL 실행 계획 분석을 통한 복합 인덱스 설계, 스트리밍 출력 파이프라인 구성으로 보고서 생성 지연 해소 및 스마트 보고서 연동 후 사용률 96.6% 안정적 서포트.
+                            </p>
+                        </div>
+
+                        <div class="problem-block">
+                            <div class="problem-title">💡 핵심 해결 과제 2: 원청-하청 간 데이터 격리 및 권한(RBAC) 체계 구축</div>
+                            <p class="problem-desc">
+                                법령 요건에 따라 협력사별 점검 데이터 접근 권한을 철저히 격리하고, 비즈니스 핵심 로직의 데이터 무결성을 보장하는 API 체계 설계.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Experience 2: 케이알피스인포텍 -->
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <h3 class="company-name">케이알피스인포텍</h3>
+                            <span class="exp-period">2020.01 ~ 2023.02 (3년 2개월)</span>
+                        </div>
+                        <div class="exp-role">기술연구소 · 대리 2년차 (Full-stack 개발)</div>
+                        <p style="color: var(--text-muted); margin-bottom: 16px;">
+                            다양한 산업군 대기업(현대건설, 현대종합설계, 한화생명 등) 고객사를 위한 SI 웹 서비스 구축 및 유지보수
+                        </p>
+
+                        <!-- 핵심 문제 해결 블록 -->
+                        <div class="problem-block">
+                            <div class="problem-title">💡 핵심 해결 과제 1: 주 52시간 근태 관리 비즈니스 로직 설계 및 장기 운영</div>
+                            <p class="problem-desc">
+                                야간 철야, 출장 시차, 반차 등 복잡한 근무 패턴의 분 단위 법정 한도 초과 예외를 완벽히 계산하는 로직 구축 및 37개월간 무장애 운영.
+                            </p>
+                        </div>
+
+                        <div class="problem-block">
+                            <div class="problem-title">💡 핵심 해결 과제 2: Classic ASP 레거시 현대화 및 선제적 API 협업 구축</div>
+                            <p class="problem-desc">
+                                화면-DB가 강결합된 레거시 코드를 .NET Core 계층형 구조로 안전하게 마이그레이션하고, 기획 확정 즉시 표준 RESTful API를 선제 배포하여 프론트엔드 작업 대기 시간 제로화.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. 프로젝트 실적 아카이브 (Project Archive) -->
+            <section id="projects">
+                <div class="container">
+                    <span class="section-tag">04 · Project Archive</span>
+                    <h2 class="section-title">수행 프로젝트 전체 실적 (15)</h2>
+
+                    <div class="project-list">
+                        <!-- 15. 스마플 어드민 -->
+                        <div class="project-row">
+                            <div class="project-info">
+                                <div class="project-name">15. 스마플 어드민 · (주)유엔이</div>
+                                <div class="project-summary">가입 사업장 및 서비스 구독 상태 관리를 위한 백오피스 어드민 시스템 (사업장/유저 통계 대시보드, 유료 구독 관리, 고객센터 연동)</div>
+                                <div class="project-tags">
+                                    <span class="project-tag">2023.08 ~ 2026.04</span>
+                                    <span class="project-tag">C#</span>
+                                    <span class="project-tag">ASP.NET Core</span>
+                                    <span class="project-tag">MSSQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 14. 스마트 보고서 서비스 -->
+                        <div class="project-row">
+                            <div class="project-info">
+                                <div class="project-name">14. 스마트 보고서 서비스 · (주)유엔이</div>
+                                <div class="project-summary">대한산업안전협회 사업장 컨설팅 및 점검 기록 전산화 관리 서비스 (메뉴별 PDF/Excel 출력, 대용량 쿼리 최적화)</div>
+                                <div class="project-tags">
+                                    <span class="project-tag">2023.04 ~ 2026.04</span>
+                                    <span class="project-tag">C#</span>
+                                    <span class="project-tag">ASP.NET Core</span>
+                                    <span class="project-tag">MSSQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 13. 스마플 (안전보건 플랫폼) -->
+                        <div class="project-row">
+                            <div class="project-info">
+                                <div class="project-name">13. 스마플 (안전보건관리 플랫폼) · (주)유엔이</div>
+                                <div class="project-summary">중대재해처벌법 준수를 위한 B2B SaaS (법정 점검/교육 핵심 로직, 원청-하청 연동 API, 보고서 출력)</div>
+                                <div class="project-tags">
+                                    <span class="project-tag">2023.04 ~ 2026.04</span>
+                                    <span class="project-tag">C#</span>
+                                    <span class="project-tag">.NET Core</span>
+                                    <span class="project-tag">MSSQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 12. 현대건설 RE100 시뮬레이션 -->
+                        <div class="project-row">
+                            <div class="project-info">
+                                <div class="project-name">12. 현대건설 RE100 시뮬레이션 · 케이알피스인포텍</div>
+                                <div class="project-summary">RE100 포트폴리오 시뮬레이션 및 신재생에너지 발전 현황 지도 연동 시각화 시스템 (풀스택 개발)</div>
+                                <div class="project-tags">
+                                    <span class="project-tag">2022.09 ~ 2023.01</span>
+                                    <span class="project-tag">C#</span>
+                                    <span class="project-tag">ASP.NET</span>
+                                    <span class="project-tag">MSSQL</span>
+                                    <span class="project-tag">JS/지도 연동</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 11. 스타플렉스VR (외주) -->
+                        <div class="project-row">
+                            <div class="project-info">
+                                <div class="project-name">11. 스타플렉스VR 관리자 웹 · 외주</div>
+                                <div class="project-summary">VR 콘텐츠 및 사용자 관리를 위한 관리자 웹 서비스 주요 메뉴 및 백엔드 개발</div>
+                                <div class="project-tags">
+                                    <span class="project-tag">2022.05 ~ 2022.07</span>
+                                    <span class="project-tag">ASP.NET Core 6</span>
+                                    <span class="project-tag">Razor Pages</span>
+                                    <span class="project-tag">MySQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 10. 현대종합설계 근무시간 상한제 고도화 -->
+                        <div class="project-row">
+                            <div class="project-info">
+                                <div class="project-name">10. 현대종합설계 근무시간 상한제 고도화 · 케이알피스인포텍</div>
+                                <div class="project-summary">Classic ASP 로직 분석 및 .NET Core/Razor Pages 프레임워크 현대화 마이그레이션</div>
+                                <div class="project-tags">
+                                    <span class="project-tag">2022.03 ~ 2022.07</span>
+                                    <span class="project-tag">Classic ASP to .NET Core</span>
+                                    <span class="project-tag">MSSQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 9. 한화생명금융서비스 자산관리 System -->
+                        <div class="project-row">
+                            <div class="project-info">
+                                <div class="project-name">9. 한화생명금융서비스 자산관리 System · 케이알피스인포텍</div>
+                                <div class="project-summary">사내 IT 기기 및 집기 등 유형 자산 통합 관리 웹 시스템 (헬프데스크, 발주 연동 API)</div>
+                                <div class="project-tags">
+                                    <span class="project-tag">2021.10 ~ 2022.02</span>
+                                    <span class="project-tag">ASP.NET Core</span>
+                                    <span class="project-tag">Razor Pages</span>
+                                    <span class="project-tag">MSSQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 8. 현대종합설계 매체제어 시스템 -->
+                        <div class="project-row">
+                            <div class="project-info">
+                                <div class="project-name">8. 현대종합설계 매체제어 시스템 · 케이알피스인포텍</div>
+                                <div class="project-summary">사내 매체 장비 제어 및 모니터링 관리자 웹 페이지 구축</div>
+                                <div class="project-tags">
+                                    <span class="project-tag">2021.08 ~ 2021.08</span>
+                                    <span class="project-tag">ASP.NET Core</span>
+                                    <span class="project-tag">MSSQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7. 현대종합설계 수행실적 관리 시스템 -->
+                        <div class="project-row">
+                            <div class="project-info">
+                                <div class="project-name">7. 현대종합설계 수행실적 관리 시스템 · 케이알피스인포텍</div>
+                                <div class="project-summary">설계 프로젝트별 수행 이력 및 실적 데이터 전산화 및 통계 추출 시스템</div>
+                                <div class="project-tags">
+                                    <span class="project-tag">2021.07 ~ 2021.09</span>
+                                    <span class="project-tag">ASP.NET Core</span>
+                                    <span class="project-tag">MSSQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6. 현대건설 배구단 공식 웹사이트 -->
+                        <div class="project-row">
+                            <div class="project-info">
+                                <div class="project-name">6. 현대건설 배구단 공식 웹사이트 · 케이알피스인포텍</div>
+                                <div class="project-summary">대외용 공식 반응형 웹사이트 및 KOVO 한국배구연맹 경기/선수 기록 실시간 연동</div>
+                                <div class="project-tags">
+                                    <span class="project-tag">2021.06 ~ 2021.12</span>
+                                    <span class="project-tag">ASP.NET MVC</span>
+                                    <span class="project-tag">MSSQL</span>
+                                    <span class="project-tag">KOVO 연맹 연동</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 5. 현대스틸산업 근무시간 상한제 웹 서비스 -->
+                        <div class="project-row">
+                            <div class="project-info">
+                                <div class="project-name">5. 현대스틸산업 근무시간 상한제 웹 서비스 · 케이알피스인포텍</div>
+                                <div class="project-summary">임직원 근무시간 상한제 시스템 장기 운영 및 유지보수 (25개월)</div>
+                                <div class="project-tags">
+                                    <span class="project-tag">2021.01 ~ 2023.01</span>
+                                    <span class="project-tag">Classic ASP</span>
+                                    <span class="project-tag">C#</span>
+                                    <span class="project-tag">MSSQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. 현대종합설계 통합 계정 관리(IM) -->
+                        <div class="project-row">
+                            <div class="project-info">
+                                <div class="project-name">4. 현대종합설계 통합 계정 관리(IM) · 케이알피스인포텍</div>
+                                <div class="project-summary">사내 계정 및 권한 중앙 집중 관리 서비스 운영 및 타 시스템 계정 동기화 (25개월)</div>
+                                <div class="project-tags">
+                                    <span class="project-tag">2021.01 ~ 2023.01</span>
+                                    <span class="project-tag">Classic ASP</span>
+                                    <span class="project-tag">C#</span>
+                                    <span class="project-tag">MSSQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. 현대스틸산업 Lessons Learned 지침서 전산화 -->
+                        <div class="project-row">
+                            <div class="project-info">
+                                <div class="project-name">3. 현대스틸산업 Lessons Learned 지침서 전산화 · 케이알피스인포텍</div>
+                                <div class="project-summary">현장 업무 지침서 및 과거 프로젝트 노하우 전산화 지식 관리 시스템</div>
+                                <div class="project-tags">
+                                    <span class="project-tag">2020.10 ~ 2021.01</span>
+                                    <span class="project-tag">ASP.NET Core</span>
+                                    <span class="project-tag">MSSQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. 현대종합설계 인사평가 시스템 -->
+                        <div class="project-row">
+                            <div class="project-info">
+                                <div class="project-name">2. 현대종합설계 인사평가 시스템 · 케이알피스인포텍</div>
+                                <div class="project-summary">임직원 인사평가 입력 화면 및 결과 관리 백엔드/DB 구축</div>
+                                <div class="project-tags">
+                                    <span class="project-tag">2020.07 ~ 2020.11</span>
+                                    <span class="project-tag">ASP.NET MVC</span>
+                                    <span class="project-tag">MSSQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 1. 현대종합설계 근무시간 상한제 웹 서비스 -->
+                        <div class="project-row">
+                            <div class="project-info">
+                                <div class="project-name">1. 현대종합설계 근무시간 상한제 웹 서비스 · 케이알피스인포텍</div>
+                                <div class="project-summary">사내 근무시간 관리 시스템 상시 운영 및 주 52시간 제도 정착 지원 (37개월 장기 운영)</div>
+                                <div class="project-tags">
+                                    <span class="project-tag">2020.01 ~ 2023.01</span>
+                                    <span class="project-tag">Classic ASP</span>
+                                    <span class="project-tag">C#</span>
+                                    <span class="project-tag">MSSQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Contact -->
+            <section id="contact" style="text-align: center;">
+                <div class="container">
+                    <span class="section-tag">05 · Contact</span>
+                    <h2 class="section-title">함께 일할 준비가 되어 있습니다</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 24px;">
+                        새로운 기회와 좋은 백엔드 프로젝트에 대해 언제든 열려 있습니다.
+                    </p>
+                    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                        <span style="font-weight: 700;">📧 hyoungsik@outlook.kr</span>
+                        <span style="font-weight: 700;">📍 서울특별시 성북구</span>
+                        <span style="font-weight: 700;">📜 CCNA 자격 보유</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2026 김형식. All rights reserved. · Type 2 Version 1</p>
+            </div>
+        </footer>
+    </body>
+</html>
